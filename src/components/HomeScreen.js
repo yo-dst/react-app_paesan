@@ -8,6 +8,12 @@ import Newsletter from "./Newsletter";
 const HomeScreen = () => {
 	return (
 		<Container fluid>
+			<Row className="centered-content">
+				<Col>
+				</Col>
+				<Col>
+				</Col>
+			</Row>
 			<Row className="centered-content qcic">
 				<Col md={12} lg={6}>
                     <img src="https://picsum.photos/500/300" alt="unknown" width="97%" />

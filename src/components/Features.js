@@ -58,7 +58,7 @@ const Features = () => {
 				</Title>
 				<Row className="centered-content features">
 					{features.map(item => (
-						<Col xs={12} sm={6} lg={3} className="features-item-container">
+						<Col xs={12} sm={6} lg={3} className="features-item-container" key={item.name}>
 							<div className="features-item">
 								<img src={item.img} alt="unkown" className="features-item-img" />
 								<div className="features-item-title">{item.name}</div>

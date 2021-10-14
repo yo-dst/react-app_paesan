@@ -114,8 +114,8 @@ const SuccessStories = () => {
                 <Row className="success-stories">
                     <Col xs={12}>
                         <Slider {...settings}>
-                            {successStories.map(item => (
-                                <div className="success-stories-item-wrapper">
+                            {successStories.map((item, index) => (
+                                <div className="success-stories-item-wrapper" key={`successStorie-${index}`}>
                                     <div className="success-stories-item" key={item.title}>
                                         <Image src={item.img} fluid />
                                         <div className="success-stories-item-title">{item.title}</div>

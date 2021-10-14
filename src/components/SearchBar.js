@@ -1,7 +1,6 @@
-import { useEffect, useState, useRef } from "react";
+import { useState, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import $ from "jquery";
 
 import "../styles/SearchBar.scss";
 

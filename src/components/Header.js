@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 import '../styles/Header.scss';
@@ -35,8 +35,8 @@ const Header = () => {
             </Container>
             <Container fluid className="navbar-wrapper">
                 <Row className="centered-content navbar">
-                    {navItems.map(item => (
-                        <Col xs="auto" className="navbar-item-wrapper">
+                    {navItems.map((item, index) => (
+                        <Col xs="auto" className="navbar-item-wrapper" key={`navbarItem-${index}`}>
                             <Link to={item.path} className="navbar-item">
                                 <div>{item.name}</div>
                                 <div className="navbar-item-underline"></div>
