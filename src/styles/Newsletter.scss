@@ -1,0 +1,58 @@
+@import "./theme.scss";
+
+.newsletter {
+	padding: $sectionPadding 0;
+}
+
+.newsletter-title {
+	font-size: $xlargeFont;
+	padding: 0 4rem;
+	text-align: center;
+	font-weight: bold;
+}
+
+.newsletter-txt {
+	text-align: center;
+	margin-top: 0.7rem;
+	font-size: $largeFont;
+	font-style: italic;
+	margin-bottom: 1rem;
+}
+
+.newsletter-email {
+	margin: auto;
+	display: flex;
+	justify-content: center;
+}
+
+.newsletter-input {
+	width: 100%;
+	height: 100%;
+	border-radius: 4px 0 0 4px;
+	border: 2px solid $primaryColor;
+	padding: 0 1rem;
+	font-size: $largeFont;
+}
+
+.newsletter-input:hover {
+	background-color: $xlightPrimaryColor;
+}
+
+.newsletter-input:focus {
+	outline: none;
+	background-color: $xlightPrimaryColor;
+}
+
+.newsletter-subscribe-btn {
+	background-color: $primaryColor;
+	border: none;
+	border-radius: 0 4px 4px 0;
+	padding: 1rem;
+	font-size: $largeFont;
+	color: $white;
+	transition: transform 0.2s;
+}
+
+.newsletter-subscribe-btn:hover {
+	transform: scaleX(1.1);
+}

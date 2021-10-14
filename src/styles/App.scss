@@ -1,0 +1,34 @@
+@import "./theme.scss";
+
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $white;
+    font-family: $primaryFont, $secondaryFont;
+    padding: 0;
+}
+
+.app-body {
+    
+}
+
+.centered-content {
+    width: 1280px;
+    max-width: 90vw;
+    margin: auto;
+}
+
+@media screen and (max-width: 576px) {
+    html {
+        
+    }
+}

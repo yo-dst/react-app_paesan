@@ -1,0 +1,98 @@
+@keyframes reduce {
+    0% {transform: scale(1);}
+    50% {transform: scale(0.9);}
+    100% {transform: scale(1);}
+}
+
+@import "./theme.scss";
+
+.footer {
+    display: flex;
+    justify-content: center;
+    background-color: $darkPrimaryColor;
+}
+
+.footer-top {
+    padding-top: $xxsectionPadding;
+    padding-bottom: $xxsectionPadding;
+}
+
+.footer-bot {
+    justify-content: center;
+    border-top: 2px solid $secondaryColor;
+    padding: 2vh 2vw 4vh 2vw;
+}
+
+.footer-bot-item {
+    white-space: nowrap;
+    text-align: center;
+    padding: 5px 20px;
+    a {
+        color: $grey3;
+        text-decoration: none;
+    }
+    a:hover {
+        color: $secondaryColor;
+        text-decoration: underline;
+    }
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-around;
+    padding: $xxsectionPadding 0vw;
+}
+
+.footer-top-txt {
+    margin-top: 10px;
+    max-width: 85%;
+    color: $grey3;
+}
+
+.footer-top-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-top-list-title {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: $white;
+}
+
+.footer-top-list-item {
+    color: $grey3;
+    text-decoration: none;
+    line-height: 2.2rem;
+    white-space: nowrap;
+}
+
+.footer-top-list-item:hover {
+    color: $white;
+}
+
+.footer-social-icons {
+    margin-top: 35px;
+    display: flex;
+}
+
+.footer-social-icon-wrapper {
+    margin-right: 15px;
+    background-color: white;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+}
+
+.footer-social-icon {
+    color: $black;
+    font-size: $xlargeFont;
+}
+
+.footer-social-icon-wrapper:hover {
+    background-color: $secondaryColor;
+    animation: reduce 0.4s ease-in-out;
+}

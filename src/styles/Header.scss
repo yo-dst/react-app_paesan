@@ -1,0 +1,88 @@
+@import "./theme.scss";
+
+.header-wrapper {
+	background-color: $darkPrimaryColor;
+}
+
+.header {
+	align-items: center;
+	height: 120px;
+	background-color: $darkPrimaryColor;
+}
+
+.header-btn {
+	background-color: $secondaryColor;
+	border: 0;
+	transition: transform 0.5s;
+	font-weight: bold;
+	padding: 2px;
+	white-space: nowrap;
+	color: $black;
+	font-size: 1.05rem;
+	border-radius: 4px;
+}
+
+.header-btn-inner {
+	padding: 1rem;
+}
+
+.header-btn:hover {
+	transform: scale(1.05);
+	color: $secondaryColor;
+	.header-btn-inner {
+		background-color: $darkPrimaryColor;
+	}
+}
+
+.navbar-wrapper {
+	background-color: $white;
+	border-bottom: 2px solid $darkPrimaryColor;
+}
+
+.navbar {
+	align-items: center;
+	justify-content: space-around;
+}
+
+.navbar-item-wrapper {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+.navbar-item-wrapper:hover {
+	.navbar-item {
+		color: $darkPrimaryColor;
+	}
+	.navbar-item-underline {
+		width: 100%;
+	}
+}
+
+.navbar-item {
+	font-size: $largeFont;
+	text-decoration: none;
+	color: $darkPrimaryColor;
+}
+
+.navbar-item-underline {
+	width: 0%;
+	height: 4px;
+	background-color: $secondaryColor;
+	transition: width 0.5s;
+	border-radius: 10px;
+}
+
+.login-icon {
+	color: $secondaryColor;
+	margin-right: 1.5rem;
+	font-size: 2.2rem;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	transition: transform 0.1s;
+}
+
+.login-icon:hover {
+	transform: scale(1.1);
+}
+

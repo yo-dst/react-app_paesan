@@ -1,0 +1,33 @@
+@import "./theme.scss";
+
+.title-container {
+	display: flex;
+    align-items: center;
+	justify-content: center;
+}
+
+.title {
+    font-size: $xxlargeFont;
+    font-weight: bold;
+	white-space: nowrap;
+    color: $black;
+}
+
+.title-square {
+    border-radius: 5px;
+    width: 1.3rem;
+    height: 1.3rem;
+    margin-right: 0.8rem;
+    background-color: $secondaryColor;
+}
+
+.title-next {
+    display: flex;
+    margin-left: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-discover-more-icon {
+    margin-left: 0.6rem;
+}

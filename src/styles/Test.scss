@@ -1,0 +1,24 @@
+.carousel-container {
+	height: 500px;
+	background-color: pink;
+	display: flex;
+	align-items: center;
+}
+
+.track {
+	display: flex;
+	height: 50%;
+	width: 100%;
+}
+
+.card-container {
+	border: 1px solid orange;
+	width: 20%;
+	padding-right: 15px;
+	box-sizing: border-box;
+}
+
+.card {
+	border: 1px solid red;
+	height: 100%;
+}

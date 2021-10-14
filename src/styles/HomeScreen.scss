@@ -1,0 +1,28 @@
+@import "./theme.scss";
+
+.qcic {
+	padding: $sectionPadding 0;
+	a {
+		color: $black;
+		font-size: $largeFont;
+	}
+}
+
+.qcic-title {
+    display: flex;
+    align-items: stretch;
+    font-size: $xxlargeFont;
+}
+
+.qcic-title-bar {
+    width: 10px;
+    background-color: $black;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.qcic-txt {
+    margin-top: 1.8rem;
+    margin-bottom: 1rem;
+    font-size: $largeFont;
+}

@@ -1,0 +1,22 @@
+@import "./theme.scss";
+
+.discover-more {
+	display: flex;
+	align-items: center;
+	color: $darkGrey;
+	cursor: pointer;
+}
+
+.discover-more-icon {
+	margin-left: 0.5rem;
+	transition: transform 0.3s;
+}
+
+.discover-more:hover {
+	.discover-more-icon {
+		transform: translateX(0.2rem);
+	}
+	.discover-more-txt {
+		text-decoration: underline;
+	}
+}

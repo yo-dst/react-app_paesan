@@ -1,0 +1,41 @@
+@import "./theme.scss";
+
+.search-bar {
+	border: 1px solid $secondaryColor;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0.5rem 1rem;
+	border-radius: 40px;
+	width: 70%;
+	cursor: text;
+}
+
+.search-bar-search {
+	border: none;
+	width: 80%;
+	margin-right: 1rem;
+	background-color: transparent;
+	color: $white;
+}
+
+.search-bar-search:focus {
+	outline: none;
+}
+
+.search-bar-icon {
+	color: $grey1;
+	font-size: 1.5rem;
+}
+
+@keyframes searchRotation {
+	0% {transform: rotate(0deg);}
+	50% {transform: rotate(-10deg);}
+	100% {transform: rotate(0deg);}
+}
+
+.search-bar:hover {
+	.search-bar-icon {
+		animation: searchRotation 0.5s infinite;
+	}
+}

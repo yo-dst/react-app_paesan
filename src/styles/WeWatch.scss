@@ -1,0 +1,39 @@
+@import "./theme.scss";
+@import "~video-react/styles/scss/video-react";
+
+.wewatch-wrapper {
+    background-color: $white;
+}
+
+.wewatch {
+    padding: $sectionPadding 0;
+    color: $black;
+    margin: auto;
+    a {
+        color: $black;
+        font-size: $largeFont;
+    }
+}
+
+.wewatch-video-wrapper {
+    width: 97%;
+}
+
+.wewatch-title {
+    display: flex;
+    align-items: stretch;
+    font-size: $xxlargeFont;
+}
+
+.wewatch-title-bar {
+    width: 10px;
+    background-color: #000;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.wewatch-txt {
+    margin-top: 1.8rem;
+    margin-bottom: 1rem;
+    font-size: $largeFont;
+}

@@ -1,0 +1,73 @@
+@import "./theme.scss";
+
+.features-container {
+	background-color: $darkPrimaryColor;
+	padding: $sectionPadding 0;
+}
+
+.features {
+	justify-content: center;
+}
+
+.features-item-container {
+	padding: 1.5rem;
+}
+
+.features-item {
+	background-color: $white;
+	text-align: center;
+	border-radius: 6px;
+	box-shadow: 0 3px 5px $black;
+	cursor: pointer;
+	transition: transform 0.4s;
+}
+
+.features-item-title {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 4rem;
+	font-size: 1rem;
+	white-space: pre-wrap;
+	border-radius: 0 0 4px 4px;
+	font-weight: bold;
+	margin: 0 1rem 0 1rem;
+	color: $black;
+}
+
+.features-item-img {
+	width: 100%;
+	border-radius: 4px 4px 0 0;
+}
+
+.features-item:hover {
+	background-color: $xlightPrimaryColor;
+	transform: translateY(0.3rem);
+}
+
+.features-upgrade {
+	cursor: pointer;
+	transition: transform 1s;
+	font-size: $largeFont;
+	transition: transform 1s;
+	color: $grey2;
+}
+
+.features-upgrade:hover {
+	transform: scale(1.1);
+	color: $white;
+}
+
+@keyframes upgradeUnderline {
+	0% {transform: translateX(0%);}
+	50% {transform: translateX(305%);}
+	100% {transform: translateX(0%);}
+}
+
+.features-upgrade-underline {
+	height: 4px;
+	width: 25%;
+	border-radius: 6px;
+	background-color: $secondaryColor;
+	animation: upgradeUnderline 4s infinite 1s ease-in-out;
+}
