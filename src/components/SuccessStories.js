@@ -1,4 +1,4 @@
-import { Row, Col, ProgressBar } from "react-bootstrap"; 
+import { Row, Col } from "react-bootstrap"; 
 
 import "../styles/SuccessStories.scss";
 import Title from "./Title";
@@ -58,8 +58,6 @@ const successStories = [
 ];
 
 const SuccessStories = () => {
-    const now = 60;
-
     return (
         <Row className="success-stories-container">
             <Col>

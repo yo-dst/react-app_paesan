@@ -1,6 +1,6 @@
 import { Container, Row, Col, Image, ProgressBar } from "react-bootstrap";
 import { faThumbsUp, faThumbsDown, faBookmark } from "@fortawesome/free-solid-svg-icons";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import "../styles/HomeScreen.scss";
@@ -66,7 +66,8 @@ const urgentContent = [
 ];
 
 const HomeScreen = () => {
-	const [selectedPage, setSelectedPage] = useState(0);
+	const selectedPage = 0;
+	//const [selectedPage, setSelectedPage] = useState(0);
 	//const nbPages = Math.floor(urgentContent.length / 3);
 
 	useEffect(() => {
@@ -117,8 +118,8 @@ const HomeScreen = () => {
 							</div>
 						</div>
 					))}
-					<div>
-						
+					<div className="pagination-nav">
+						{}
 					</div>
 					{/*
 					<div>
