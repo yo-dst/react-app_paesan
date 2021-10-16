@@ -1,0 +1,36 @@
+@import "./theme.scss";
+
+.fresh-favorites {
+    padding: $sectionPadding 0;
+}
+
+.fresh-favorites-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.fresh-favorites-timeLeft {
+	margin-top: 0.1rem;
+	color: $thirdColor;
+}
+
+.fresh-favorites-txt {
+    margin-top: 0.4rem;
+	color: $black;
+}
+
+.fresh-favorites-hashtags {
+	margin-top: 1rem;
+	color: $xdarkGrey;
+}
+
+.fresh-favorites-participants {
+	margin-top: 0.2rem;
+	color: $thirdColor;
+	font-weight: bold;
+}
+
+.fresh-favorites-organisation {
+	margin-top: 0.2rem;
+    font-style: italic;
+}

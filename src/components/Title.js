@@ -4,10 +4,10 @@ import "../styles/Title.scss";
 
 const Title = ({ title, color, children }) => {
 	return (
-		<Row className="align-items-center mb-2 justify-content-center">
-			<Col xs={12} sm="auto" className="title-container">
+		<Row className="title-container">
+			<Col xs={12} sm="auto" className="title">
 				<div className="title-square"></div>
-				<div className="title" style={{color: color}}>{title}</div>
+				<div className="title-title" style={{color: color}}>{title}</div>
 			</Col>
 			<Col xs={12} sm="auto">
 				<div className="title-next">

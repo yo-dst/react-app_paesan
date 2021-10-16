@@ -1,0 +1,36 @@
+@import "./theme.scss";
+
+.sliderCard-wrapper {
+    padding: 10px;
+}
+
+.sliderCard {
+    color: $black;
+    text-decoration: none;
+    padding-bottom: 10px;
+    box-shadow: 0 3px 5px $black;
+    cursor: pointer;
+    transition: all 0.3s;
+	border-radius: 0 0 4px 4px;
+}
+
+.sliderCard:hover {
+    transform: scale(1.01);
+    filter: brightness(110%);
+}
+
+.sliderCard-body {
+	padding: 0.5rem 0.7rem 0.2rem 0.7rem;
+}
+
+.sliderCar-progress-bar {
+    border-radius: 0;
+    height: 15px;
+    background-color: $xlightGrey;
+}
+
+.progress-bar {
+    background: $secondaryColor;
+    color: $black;
+    font-weight: bold;
+}

@@ -1,5 +1,9 @@
 @import "./theme.scss";
 
+.landing {
+    padding: $sectionPadding 0;
+}
+
 .qcic {
 	padding: $sectionPadding 0;
 	a {
@@ -25,4 +29,175 @@
     margin-top: 1.8rem;
     margin-bottom: 1rem;
     font-size: $largeFont;
+}
+
+.featured-cause {
+    cursor: pointer;
+    padding: 1rem 3rem 1rem 3rem;
+    border-radius: 6px;
+    background-color: $darkPrimaryColor;
+    transition: transform 0.3s;
+    box-shadow: 0 0 7px $darkPrimaryColor;
+}
+
+.featured-cause-img {
+    transition: filter 0.2s;
+}
+
+.featured-cause:hover {
+    transform: scale(1.01);
+    .featured-cause-img {
+        filter: brightness(105%);
+    }
+}
+
+.featured-cause-section-title {
+    display: flex;
+    align-items: center;
+	justify-content: flex-start;
+    margin-bottom: 1rem;
+}
+
+.featured-cause-section-title-square {
+    border-radius: 5px;
+    width: 1.3rem;
+    height: 1.3rem;
+    margin-right: 0.8rem;
+    background-color: $secondaryColor;
+}
+
+.featured-cause-section-title-title {
+    font-size: $xxlargeFont;
+    font-weight: bold;
+	white-space: nowrap;
+    color: $white;
+}
+
+.urgent-section-title {
+    font-size: $xxlargeFont;
+    font-weight: bold;
+	white-space: nowrap;
+    color: $black;
+}
+
+.featured-cause-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-top: 0.7rem;
+    color: $white;
+}
+
+.featured-cause-timeLeft {
+	margin-top: 0.1rem;
+	color: $thirdColor;
+    font-size: $largeFont;
+    filter: brightness(130%);
+}
+
+.featured-cause-txt {
+    margin-top: 0.5rem;
+	color: $xlightGrey;
+    font-size: 1.1rem;
+}
+
+.featured-cause-hashtags {
+	margin-top: 1rem;
+    font-size: 1.1rem;
+    color: $white;
+}
+
+.featured-cause-participants {
+	margin-top: 0.3rem;
+	color: $thirdColor;
+	font-weight: bold;
+    font-size: 1.1rem;
+    filter: brightness(130%);
+}
+
+.featured-cause-organisation {
+	margin-top: 0.3rem;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: $xlightGrey;
+}
+
+.featured-cause-progress-bar {
+    border-radius: 0 0 4px 4px;
+    height: 25px;
+    background-color: $xlightGrey;
+}
+
+.urgent {
+    padding: 1rem 1rem 1rem 3rem;
+
+}
+
+.urgent:hover {
+
+}
+
+.urgent-item {
+    display: flex;
+    margin-bottom: 2rem;
+    transition: transform 0.3s;
+    cursor: pointer;
+    border-radius: 0 6px 6px 0;
+}
+
+.urgent-item:hover {
+    transform: translateX(0.5rem);
+    background-color: $xlightPrimaryColor;
+}
+
+.urgent-img {
+    width: 40%;
+    margin-right: 1rem;
+}
+
+.urgent-title {
+    font-size: $largeFont;
+    font-weight: bold;
+    margin-top: 0.2rem;
+}
+
+.urgent-prog-bar {
+    background-color: $xlightGrey;
+    margin-top: 0.3rem;
+    height: 10px;
+}
+
+.urgent-participants {
+    margin-top: 0.3rem;
+    color: $thirdColor;
+}
+
+.urgent-author {
+    margin-top: 0.3rem; 
+}
+
+.urgent-icons {
+    display: flex;
+    margin-top: 0.5rem;
+    margin-bottom: 0.4rem;
+}
+
+.urgent-icon-wrapper {
+    margin-right: 0.6rem;
+    padding: 0.5rem 1rem;
+    background-color: $white;
+    border-radius: 50%;
+    color: $primaryColor;
+    font-size: 0.8rem;
+    border: 1px solid $primaryColor;
+    transition: transform 0.2s;
+}
+
+.urgent-icon-wrapper:hover {
+    transform: scale(0.9);
+}
+
+@media screen and (max-width: 576px) {
+    .title-square {
+        width: 0.6rem;
+    }
 }

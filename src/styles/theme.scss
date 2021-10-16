@@ -5,10 +5,12 @@ $secondaryColor: #29f0b4;
 $xlightPrimaryColor: #ece9fa;
 $lightPrimaryColor: #c7bfec;
 $darkPrimaryColor: #1b1f2e;
-$grey1: #dbdbdb;
-$grey2: #c8c8c8;
-$grey3: #8d91a2;
+$thirdColor: #2171DB;
+$xlightGrey: #dbdbdb;
+$lightGrey: #c8c8c8;
+$grey: #8d91a2; 
 $darkGrey: #707070;
+$xdarkGrey: #444444;
 $black: #202020;
 $white: #ffffff;
 $darkWhite: #f0f0f0;
@@ -29,6 +31,6 @@ $textColor2: $white;
 
 // --- Padding ---
 
-$sectionPadding: 4rem;
-$xsectionPadding: 6rem;
-$xxsectionPadding: 8rem;
+$sectionPadding: 3rem;
+$xsectionPadding: 4rem;
+$xxsectionPadding: 6rem;

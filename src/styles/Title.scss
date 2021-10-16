@@ -1,12 +1,20 @@
 @import "./theme.scss";
 
 .title-container {
-	display: flex;
     align-items: center;
-	justify-content: center;
+    margin: auto;
+    width: 1280px;
+    max-width: 80vw;
+    margin-bottom: 0.8rem;
 }
 
 .title {
+	display: flex;
+    align-items: center;
+	justify-content: flex-start;
+}
+
+.title-title {
     font-size: $xxlargeFont;
     font-weight: bold;
 	white-space: nowrap;
@@ -23,11 +31,22 @@
 
 .title-next {
     display: flex;
-    margin-left: 1rem;
+    margin-left: 0.3rem;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .title-discover-more-icon {
     margin-left: 0.6rem;
 }
+
+@media screen and (max-width: 576px) {
+    .title-next {
+        margin-left: 1.5rem;
+    }
+    .title-square {
+        width: 0.6rem;
+    }
+}
+
+

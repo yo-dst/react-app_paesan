@@ -1,12 +1,12 @@
-import { Row, Col, ProgressBar } from "react-bootstrap"; 
+import { Row, Col } from "react-bootstrap";
 
-import "../styles/SuccessStories.scss";
+import "../styles/InYourArea.scss";
+import Slider from "./Slider";
 import Title from "./Title";
 import DiscoverMore from "./DiscoverMore";
-import Slider from "./Slider";
 import SliderCard from "./SliderCard";
 
-const successStories = [
+const inYourAreaContent = [
     {
         img: "https://picsum.photos/600/400",
         title: "This is a cool story, really really cool",
@@ -57,27 +57,28 @@ const successStories = [
     }
 ];
 
-const SuccessStories = () => {
-    const now = 60;
-
-    return (
-        <Row className="success-stories-container">
+const InYourArea = () => {
+	return (
+		<Row className="area">
             <Col>
-                <Title title="SUCCESS STORIES">
+                <Title title="IN YOUR AREA">
                     <DiscoverMore />
                 </Title>
                 <Slider>
-                    {successStories.map((item, index) => (
-                        <SliderCard img={item.img} progressBar={60} key={`success-storie-${index}`}>
-                            <div className="success-stories-item-title">{item.title}</div>
-                            <div className="success-stories-item-txt">{item.txt}</div>
-                            <div className="success-stories-item-organisation">By {item.organisation}</div>
-                        </SliderCard>
+                    {inYourAreaContent.map((item, index) => (
+						<SliderCard img={item.img} progressBar={40} key={`area-${index}`}>
+							<div className="area-title">Cause Name, Country</div>
+							<div className="area-timeLeft">XX Days/hours/minutes left</div>
+							<div className="area-txt">{item.txt}</div>
+							<div className="area-hashtags">#Freedom Of Speech, #Heathcare</div>
+							<div className="area-participants">3,000,000 Participants</div>
+							<div className="area-organisation">By {item.organisation}</div>
+						</SliderCard>
                     ))}
                 </Slider>
             </Col>
         </Row>
-    );
+	);
 }
 
-export default SuccessStories;
+export default InYourArea;

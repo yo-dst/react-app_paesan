@@ -1,0 +1,36 @@
+@import "./theme.scss";
+
+.area {
+    padding: $sectionPadding 0;
+}
+
+.area-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.area-timeLeft {
+	margin-top: 0.1rem;
+	color: $thirdColor;
+}
+
+.area-txt {
+    margin-top: 0.4rem;
+	color: $black;
+}
+
+.area-hashtags {
+	margin-top: 1rem;
+	color: $xdarkGrey;
+}
+
+.area-participants {
+	margin-top: 0.2rem;
+	color: $thirdColor;
+	font-weight: bold;
+}
+
+.area-organisation {
+	margin-top: 0.2rem;
+    font-style: italic;
+}

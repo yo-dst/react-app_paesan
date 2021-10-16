@@ -1,12 +1,12 @@
-import { Row, Col, ProgressBar } from "react-bootstrap"; 
+import { Row, Col } from "react-bootstrap"; 
 
-import "../styles/SuccessStories.scss";
+import "../styles/ChangeMakers.scss";
+import SliderCard from "./SliderCard";
 import Title from "./Title";
 import DiscoverMore from "./DiscoverMore";
 import Slider from "./Slider";
-import SliderCard from "./SliderCard";
 
-const successStories = [
+const changeMakersContent = [
     {
         img: "https://picsum.photos/600/400",
         title: "This is a cool story, really really cool",
@@ -57,27 +57,24 @@ const successStories = [
     }
 ];
 
-const SuccessStories = () => {
-    const now = 60;
-
-    return (
-        <Row className="success-stories-container">
+const ChangeMakers = () => {
+	return (
+		<Row className="changeMakers">
             <Col>
-                <Title title="SUCCESS STORIES">
+                <Title title="CHANGE MAKERS">
                     <DiscoverMore />
                 </Title>
                 <Slider>
-                    {successStories.map((item, index) => (
-                        <SliderCard img={item.img} progressBar={60} key={`success-storie-${index}`}>
-                            <div className="success-stories-item-title">{item.title}</div>
-                            <div className="success-stories-item-txt">{item.txt}</div>
-                            <div className="success-stories-item-organisation">By {item.organisation}</div>
-                        </SliderCard>
+                    {changeMakersContent.map((item, index) => (
+						<SliderCard img={item.img} progressBar={78} key={`changeMaker-${index}`}>
+							<div className="changeMaker-title">Name Surname, Country</div>
+							<div className="changeMaker-txt">{item.txt}</div>
+							<div className="changeMaker-hashtags">#Change Maker, #Heathcare</div>
+						</SliderCard>
                     ))}
                 </Slider>
             </Col>
         </Row>
-    );
+	);
 }
-
-export default SuccessStories;
+export default ChangeMakers;

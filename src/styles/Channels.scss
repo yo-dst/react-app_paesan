@@ -1,0 +1,20 @@
+@import "./theme.scss";
+
+.channels {
+    padding: $sectionPadding 0;
+}
+
+.channel-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.channel-txt {
+    margin-top: 0.3rem;
+	color: $black;
+}
+
+.channel-hashtags {
+	margin-top: 1rem;
+	color: $xdarkGrey;
+}
