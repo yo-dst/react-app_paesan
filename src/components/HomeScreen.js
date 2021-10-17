@@ -1,6 +1,6 @@
 import { Container, Row, Col, Image, ProgressBar } from "react-bootstrap";
 import { faThumbsUp, faThumbsDown, faBookmark } from "@fortawesome/free-solid-svg-icons";
-import { useEffect } from "react";
+import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import "../styles/HomeScreen.scss";
@@ -12,7 +12,8 @@ import Channels from "./Channels";
 import ChangeMakers from "./ChangeMakers";
 import NewCauses from "./NewCauses";
 import FreshFavorites from "./FreshFavorites";
-
+import Pagination from "./Pagination";
+import KeyChangeMakers from "./KeyChangeMakers";
 
 const urgentContent = [
     {
@@ -51,28 +52,23 @@ const urgentContent = [
         txt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis imperdiet ipsum. Sed sagittis ex metus, sed vestibulum erat rutrum nec.",
         organisation: "Organisation Name 6"
     },
-    {
+	{
         img: "https://picsum.photos/500/300",
         title: "This is a cool story, really really cool",
         txt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis imperdiet ipsum. Sed sagittis ex metus, sed vestibulum erat rutrum nec.",
-        organisation: "Organisation Name 7"
+        organisation: "Organisation Name 5"
     },
     {
         img: "https://picsum.photos/500/300",
         title: "This is a cool story, really really cool",
         txt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis imperdiet ipsum. Sed sagittis ex metus, sed vestibulum erat rutrum nec.",
-        organisation: "Organisation Name 8"
+        organisation: "Organisation Name 6"
     }
 ];
 
 const HomeScreen = () => {
-	const selectedPage = 0;
-	//const [selectedPage, setSelectedPage] = useState(0);
-	//const nbPages = Math.floor(urgentContent.length / 3);
-
-	useEffect(() => {
-
-	}, [selectedPage]);
+	const [selectedPage, setSelectedPage] = useState(0);
+	const nbPages = Math.ceil(urgentContent.length / 3);
 
 	return (
 		<Container fluid>
@@ -103,7 +99,7 @@ const HomeScreen = () => {
 								<div className="urgent-title">Ut blanditis elit a quas</div>
 								<ProgressBar className="urgent-prog-bar" now={66} />
 								<div className="urgent-participants"><strong>3,000,000 Participants</strong>, 3 days left</div>
-								<div className="urgent-author">By Tom</div>
+								<div className="urgent-author">By {item.organisation}</div>
 								<div className="urgent-icons">
 									<div className="urgent-icon-wrapper">
 										<FontAwesomeIcon icon={faBookmark} />
@@ -118,16 +114,11 @@ const HomeScreen = () => {
 							</div>
 						</div>
 					))}
-					<div className="pagination-nav">
-						{}
-					</div>
-					{/*
-					<div>
-						
-						<button onClick={e => setSelectedPage(selectedPage + 1)}>plus</button>
-						<button onClick={e => setSelectedPage(selectedPage - 1)}>moins</button>
-					</div>
-					*/}
+					{nbPages !== 1 ?
+						<Pagination nbPages={nbPages} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+						:
+						null
+					}
 				</Col>
 			</Row>
 			<Row className="centered-content qcic">
@@ -150,6 +141,7 @@ const HomeScreen = () => {
 			<Channels />
 			<InYourArea />
 			<Features />
+			<KeyChangeMakers />
             <SuccessStories />
 		</Container>
 	);

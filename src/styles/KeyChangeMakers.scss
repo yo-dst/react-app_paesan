@@ -1,0 +1,29 @@
+@import "./theme.scss";
+
+.key-makers {
+	padding: $sectionPadding 0;
+}
+
+.key-makers-title {
+	background-color: $primaryColor;
+	color: $white;
+	font-size: $xxlargeFont;
+	padding: 2rem 1rem;
+	border-radius: 4px;
+	font-weight: bold;
+	box-shadow: 1px 2px 6px $black;
+}
+
+.key-makers-subtitle {
+	color: $black;
+	font-size: $xlargeFont;
+	margin-top: 1rem;
+	font-weight: bold;
+}
+
+.key-makers-txt {
+	color: $black;
+	margin-top: 1rem;
+	font-size: $largeFont;
+	font-style: italic; 
+}
