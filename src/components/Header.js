@@ -4,7 +4,6 @@ import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 import '../styles/Header.scss';
-import { navItems } from "../data";
 import SearchBar from "./SearchBar";
 
 const Header = () => {
@@ -31,18 +30,6 @@ const Header = () => {
                         </Link>
                         <SearchBar />
                     </Col>
-                </Row>
-            </Container>
-            <Container fluid className="navbar-wrapper">
-                <Row className="centered-content navbar">
-                    {navItems.map((item, index) => (
-                        <Col xs="auto" className="navbar-item-wrapper" key={`navbarItem-${index}`}>
-                            <Link to={item.path} className="navbar-item">
-                                <div>{item.name}</div>
-                                <div className="navbar-item-underline"></div>
-                            </Link>
-                        </Col>
-                    ))}
                 </Row>
             </Container>
         </>

@@ -141,7 +141,7 @@ const Footer = () => {
                     <Row className="centered-content">
                         <Col xs={12} className="footer-top">
                             <Row className="justify-content-around">
-                                <Col xs={5} md={4}>
+                                <Col xs={12} md={5} lg={4} className="footer-top-block">
                                     <img src="https://picsum.photos/300/100" alt="unknown" width="80%" />
                                     <div className="footer-top-txt">
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel interdum ex.
@@ -155,7 +155,7 @@ const Footer = () => {
                                     </div>
                                 </Col>
                                 {footerTopContent.map(item => (
-                                    <Col xs={5} md={2} key={item.title}>
+                                    <Col xs={12} md={5} lg={2} key={item.title} className="footer-top-block">
                                         <div className="footer-top-list">
                                             <div className="footer-top-list-title">{item.title}</div>
                                             {item.items.map(item => (

@@ -1,0 +1,40 @@
+@import "../styles/theme.scss";
+
+.navbar-wrapper {
+	background-color: $white;
+	border-bottom: 2px solid $darkPrimaryColor;
+}
+.navbar {
+	align-items: center;
+	justify-content: space-around;
+}
+.navbar-item-wrapper {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+.navbar-item-wrapper:hover {
+	.navbar-item {
+		color: $darkPrimaryColor;
+	}
+	.navbar-item-underline {
+		width: 100%;
+	}
+}
+.navbar-item {
+	font-size: $largeFont;
+	text-decoration: none;
+	color: $darkPrimaryColor;
+}
+.navbar-item-underline {
+	width: 0%;
+	height: 4px;
+	background-color: $secondaryColor;
+	transition: width 0.5s;
+	border-radius: 10px;
+}
+
+@media screen and (max-width: 991px) {
+	.navbar-wrapper {
+		display: none;
+	}
+}

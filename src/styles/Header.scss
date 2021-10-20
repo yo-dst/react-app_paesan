@@ -13,7 +13,7 @@
 .header-btn {
 	background-color: $secondaryColor;
 	border: 0;
-	transition: transform 0.2s;
+	transition: transform 0.1s;
 	font-weight: bold;
 	padding: 2px;
 	white-space: nowrap;
@@ -35,44 +35,6 @@
 	}
 }
 
-.navbar-wrapper {
-	background-color: $white;
-	border-bottom: 2px solid $darkPrimaryColor;
-}
-
-.navbar {
-	align-items: center;
-	justify-content: space-around;
-}
-
-.navbar-item-wrapper {
-	margin-top: 1rem;
-	margin-bottom: 1rem;
-}
-
-.navbar-item-wrapper:hover {
-	.navbar-item {
-		color: $darkPrimaryColor;
-	}
-	.navbar-item-underline {
-		width: 100%;
-	}
-}
-
-.navbar-item {
-	font-size: $largeFont;
-	text-decoration: none;
-	color: $darkPrimaryColor;
-}
-
-.navbar-item-underline {
-	width: 0%;
-	height: 4px;
-	background-color: $secondaryColor;
-	transition: width 0.5s;
-	border-radius: 10px;
-}
-
 .login-icon {
 	color: $secondaryColor;
 	margin-right: 1.5rem;
@@ -80,7 +42,7 @@
 	display: flex;
 	align-items: center;
 	cursor: pointer;
-	transition: transform 0.1s;
+	transition: transform 0.05s;
 }
 
 .login-icon:hover {

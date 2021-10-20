@@ -8,7 +8,6 @@
     padding: 3vh 0;
     margin-top: 2rem;
 }
-
 .footer-navbar-item {
     transition: transform 0.1s;
     text-decoration: none;
@@ -16,8 +15,13 @@
     font-size: 1.2rem;
     white-space: nowrap;
 }
-
 .footer-navbar-item:hover {
     transform: scale(1.07);
     color: #000;
+}
+
+@media screen and (max-width: 900px) {
+    .footer-navbar {
+        display: none;
+    }
 }

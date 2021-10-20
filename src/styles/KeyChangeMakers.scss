@@ -1,17 +1,20 @@
 @import "./theme.scss";
 
 .key-makers {
-	padding: $sectionPadding 0;
+	padding: $xsectionPadding 0;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .key-makers-title {
 	background-color: $primaryColor;
 	color: $white;
-	font-size: $xxlargeFont;
-	padding: 2rem 1rem;
+	font-size: $xxxlargeFont;
+	padding: 1.5rem 1.5rem;
 	border-radius: 4px;
 	font-weight: bold;
-	box-shadow: 1px 2px 6px $black;
+	box-shadow: 1px 2px 10px $black;
+	flex-shrink: 0;
 }
 
 .key-makers-subtitle {
@@ -25,5 +28,125 @@
 	color: $black;
 	margin-top: 1rem;
 	font-size: $largeFont;
-	font-style: italic; 
+	font-style: italic;
+}
+
+.key-makers-makers-container {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+
+.key-makers-makers-border {
+	border: 2px solid $darkPrimaryColor;
+	height: 60%;
+	width: 85%;
+	position: absolute;
+	top: 20%;
+	left: 7.5%;
+}
+
+.key-maker {
+	position: relative;
+	padding: 1rem 2rem 1rem 0;
+	z-index: 2;
+	cursor: pointer;
+	transition: transform 0.1s;
+}
+
+.key-maker:hover {
+	transform: scale(1.05);
+}
+
+.key-maker-title {
+	background-color: white;
+	padding: 0.5rem 1rem;
+	border-radius: 6px;
+	position: absolute;
+	top: 80%;
+	right: 0;
+	width: 85%;
+	box-shadow: 0 0 5px $black;
+}
+.key-maker-title-name {
+	font-weight: bold;
+}
+
+.makers-mobile {
+	display: none;
+	position: relative;
+	padding: 0 2rem;
+}
+.makers-border-mobile {
+	border: 2px solid $darkPrimaryColor;
+	width: 90%;
+	height: 80%;
+	position: absolute;
+	top: 10%;
+	left: 5%;
+}
+.makers-mobile-item {
+	margin-top: 3rem;
+	z-index: 2;
+	position: relative;
+	padding-bottom: 2rem;
+	padding-right: 2rem;
+}
+.makers-mobile-item-title {
+	background-color: $white;
+	padding: 0.5rem 1rem;
+	border-radius: 6px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+
+}
+.makers-mobile-item-title-name {
+	font-weight: bold;
+}
+.makers-mobile-item-title-role {
+
+}
+
+@media screen and (max-width: 1200px) {
+    .key-makers-subtitle, .key-makers-txt {
+		padding-left: 1rem;
+	}
+	.key-makers-makers-container {
+		margin-top: 2.5rem;
+	}
+}
+
+@media screen and (max-width: 992px) {
+    .key-makers-makers-container {
+		display: none;
+	}
+	.makers-mobile {
+		display: flex;
+	}
+	.key-maker {
+		max-width: 35%;
+		padding: 0 1rem 0 0;
+		margin-top: 2.5rem;
+	}
+	.key-makers-makers-container {
+		margin-top: 0;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.key-makers-title {
+		padding: 1.5rem 0.5rem;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.makers-border-mobile {
+		width: 2px;
+		border: none;
+		height: 80%;
+		background-color: $darkPrimaryColor;
+		left: 35%;
+		top: 10%;
+	}
 }

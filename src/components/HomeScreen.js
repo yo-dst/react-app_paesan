@@ -14,6 +14,7 @@ import NewCauses from "./NewCauses";
 import FreshFavorites from "./FreshFavorites";
 import Pagination from "./Pagination";
 import KeyChangeMakers from "./KeyChangeMakers";
+import Navbar from "./Navbar";
 
 const urgentContent = [
     {
@@ -72,8 +73,9 @@ const HomeScreen = () => {
 
 	return (
 		<Container fluid>
+			<Navbar />
 			<Row className="centered-content landing">
-				<Col className="featured-cause">
+				<Col xs={12} lg={6} className="featured-cause">
 					<div className="featured-cause-section-title">
 						<div className="featured-cause-section-title-square"></div>
 						<div className="featured-cause-section-title-title">FEATURED CAUSE</div>
@@ -87,7 +89,7 @@ const HomeScreen = () => {
 					<div className="featured-cause-participants">5,059,575 Participants</div>
 					<div className="featured-cause-organisation">By Organisation Name</div>
 				</Col>
-				<Col className="urgent">
+				<Col xs={12} lg={6} className="urgent">
 					<div className="featured-cause-section-title">
 						<div className="featured-cause-section-title-square"></div>
 						<div className="urgent-section-title">URGENT REQUIRES ACTION</div>
@@ -95,7 +97,7 @@ const HomeScreen = () => {
 					{urgentContent.slice(selectedPage * 3, selectedPage * 3 + 3).map((item, index) => (
 						<div className="urgent-item" key={`urgent-item-${index}`}>
 							<Image src={item.img} className="urgent-img" />
-							<div className="urgent-body">
+							<div>
 								<div className="urgent-title">Ut blanditis elit a quas</div>
 								<ProgressBar className="urgent-prog-bar" now={66} />
 								<div className="urgent-participants"><strong>3,000,000 Participants</strong>, 3 days left</div>
@@ -123,7 +125,7 @@ const HomeScreen = () => {
 			</Row>
 			<Row className="centered-content qcic">
 				<Col md={12} lg={6}>
-                    <img src="https://picsum.photos/500/300" alt="unknown" width="97%" />
+                    <img src="https://picsum.photos/600/350" alt="unknown" width="97%" />
                 </Col>
                 <Col md={12} lg={6} className="mt-lg-0 mt-md-5">
                     <div className="qcic-title">

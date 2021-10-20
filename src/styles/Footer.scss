@@ -96,3 +96,22 @@
     background-color: $secondaryColor;
     animation: reduce 0.4s ease-in-out;
 }
+
+.footer-top-block {
+    padding-left: 2rem;
+}
+
+@media screen and (max-width: 991px) {
+    .footer-top {
+        padding: $sectionPadding 0;
+    }
+    .footer-top-block {
+        margin-top: 3rem;
+    }
+    .footer-social-icons {
+        margin-top: 1rem;
+    }
+    .footer-bot {
+        margin-top: 2rem;
+    }
+}

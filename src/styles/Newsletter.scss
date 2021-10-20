@@ -1,7 +1,7 @@
 @import "./theme.scss";
 
 .newsletter {
-	padding: $sectionPadding 0;
+	padding: $xsectionPadding 0;
 }
 
 .newsletter-title {
@@ -55,4 +55,16 @@
 
 .newsletter-subscribe-btn:hover {
 	transform: scaleX(1.1);
+}
+
+@media screen and (max-width: 576px) {
+	.newsletter-input {
+		border-radius: 4px;
+		height: 40px;
+	}
+	.newsletter-subscribe-btn {
+		border-radius: 4px;
+		margin-top: 0.7rem;
+		padding: 1rem 2rem;
+	}
 }
