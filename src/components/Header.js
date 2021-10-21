@@ -12,12 +12,12 @@ const Header = () => {
             <Container fluid className="header-wrapper">
                 <Row className="centered-content header">
                     <Col className="d-flex align-items-center">
-                        <button className="header-btn" style={{marginRight: "1.5rem"}}>
+                        <Link to="signal-risk" className="header-btn" style={{marginRight: "1.5rem"}}>
                             <div className="header-btn-inner">Signal a risk</div>
-                        </button>
-                        <button className="header-btn">
+                        </Link>
+                        <Link to="launch-cause" className="header-btn">
                             <div className="header-btn-inner">Launch a cause</div>
-                        </button>
+                        </Link>
                     </Col>
                     <Col className="d-flex align-items-center justify-content-center">
                         <Link to="/">
