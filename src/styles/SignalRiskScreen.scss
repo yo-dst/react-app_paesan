@@ -1,0 +1,21 @@
+@import "./theme.scss";
+
+.petition {
+	width: 900px;
+	max-width: 90vw;
+	margin: auto;
+}
+.petition-issue-container {
+	background-color: pink;
+	padding: 1.5rem;
+}
+.petition-issue-container-active {
+	background-color: $secondaryColor;
+}
+.petition-issue {
+	background-color: transparent;
+	border: none;
+}
+.petition-issue-title {
+	text-align: center;
+}

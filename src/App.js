@@ -10,6 +10,7 @@ import WeWatch from './components/WeWatch';
 import HomeScreen from './components/HomeScreen';
 import LoginScreen from './components/LoginScreen';
 import RegisterScreen from './components/HomeScreen';
+import SignalRiskScreen from "./components/SignalRiskScreen";
 
 const routes = [
     {
@@ -24,6 +25,10 @@ const routes = [
         path: "/register",
         component: RegisterScreen
     },
+	{
+        path: "/signal-risk",
+        component: SignalRiskScreen
+    }
 ];
 
 const App = () => {
