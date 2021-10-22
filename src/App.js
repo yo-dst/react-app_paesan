@@ -11,6 +11,7 @@ import HomeScreen from './components/HomeScreen';
 import LoginScreen from './components/LoginScreen';
 import RegisterScreen from './components/HomeScreen';
 import SignalRiskScreen from "./components/SignalRiskScreen";
+import LaunchCauseScreen from "./components/LaunchCauseScreen";
 
 const routes = [
     {
@@ -28,6 +29,10 @@ const routes = [
 	{
         path: "/signal-risk",
         component: SignalRiskScreen
+    },
+	{
+        path: "/launch-cause",
+        component: LaunchCauseScreen
     }
 ];
 

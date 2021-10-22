@@ -1,10 +1,15 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
-import { Container, Row, Col, Card, Form, Button, InputGroup } from "react-bootstrap";
+import { Container, Row, Col, Card, Form, InputGroup } from "react-bootstrap";
 import { faQuestionCircle } from "@fortawesome/free-regular-svg-icons";
 
-import "../styles/SignalRiskScreen.scss";
+import "../styles/Petition.scss";
 import Navbar from "./Navbar";
+import InYourArea from "./InYourArea";
+import SuccessStories from "./SuccessStories";
+import Features from "./Features";
+import KeyChangeMakers from "./KeyChangeMakers";
+
 
 const issuesContent = [
 	{
@@ -56,16 +61,36 @@ const PetitionTitle = ({ title, subtitle }) => {
 
 const FilesInput = () => {
 	const [files, setFiles] = useState([]);
+	const [urls, setUrls] = useState([]);
 	
+	const onChange = (e) => {
+		let filesArr = Array.prototype.slice.call(e.target.files);
+		setFiles([...filesArr]);
+	}
+
 	return (
-		<div>
+		<div className="files-input">
 			<label className="custom-file-upload">
-				<input type="file" multiple onChange={e => {var filesArr = Array.prototype.slice.call(e.target.files); console.log(filesArr)}} />
-				<i className="fa fa-cloud-upload" /> Attach
+				<input type="file" multiple onChange={onChange} />
+				Choose a file
 			</label>
-			{files}
+			<div className="files-input-border"></div>
+			
+			<InputGroup className="files-input-group">
+				<Form.Control
+					className="files-input-url"
+					type="text"
+					value={urls}
+					onChange={e => setUrls([...urls, e.target.value])}
+					placeholder="http://"
+				/>
+				<InputGroup.Text className="files-input-btn">Submit</InputGroup.Text>
+			</InputGroup>
+			{files.map(file => (
+				<div>{file.name}</div>
+			))}
 		</div>
-	  );
+	);
 }
 
 const SignalRiskScreen = () => {
@@ -73,7 +98,8 @@ const SignalRiskScreen = () => {
 		issueSelected: null,
 		keywords: "",
 		goal: "",
-		target: ""
+		target: "",
+		keywordsMedia: ""
 	});
 
 	return (
@@ -102,7 +128,7 @@ const SignalRiskScreen = () => {
 							</Col>
 						))}
 					</Row>
-					<Row className="justify-content-center mt-3">
+					<Row className="justify-content-center mt-5 mb-5">
 						<Col md={8}>
 							<Form.Control
 								className="petition-keywords"
@@ -113,13 +139,13 @@ const SignalRiskScreen = () => {
 							/>
 						</Col>
 					</Row>
-					<Row className="justify-content-center mt-3">
+					<Row className="justify-content-center petition-form-block">
 						<Col>
 							<PetitionTitle
 								title="Write Your Risk Title"
 								subtitle="this is the first thing people will see about your risk. Get their attention with short title that focus on the change you'd like them to support"
 							/>
-							<InputGroup className="mb-3">
+							<InputGroup className="mt-4">
 								<Form.Control
 									className="petition-goal"
 									type="text"
@@ -133,13 +159,13 @@ const SignalRiskScreen = () => {
 							</InputGroup>
 						</Col>
 					</Row>
-					<Row className="justify-content-center mt-3">
+					<Row className="justify-content-center petition-form-block">
 						<Col>
 							<PetitionTitle
 								title="Great! Who Has The Power To Make This Change?"
 								subtitle="Choose the recipient(s) of your petition. These are people or organisations with the power to solve your problem or take the action you’re demanding."
 							/>
-							<InputGroup className="mb-3">
+							<InputGroup className="mt-4">
 								<Form.Control
 									className="petition-target"
 									type="text"
@@ -153,7 +179,7 @@ const SignalRiskScreen = () => {
 							</InputGroup>
 						</Col>
 					</Row>
-					<Row className="justify-content-center mt-3">
+					<Row className="justify-content-center petition-form-block">
 						<Col>
 							<PetitionTitle
 								title="Add A Photo Or Video"
@@ -162,9 +188,28 @@ const SignalRiskScreen = () => {
 							<FilesInput />
 						</Col>
 					</Row>
-					<button onClick={e => console.log(data)} >Submit</button>
+					<Row className="justify-content-center mt-4">
+						<Col>
+							<Form.Control
+								className="petition-keywords-media"
+								type="text"
+								value={data.keywordsMedia}
+								onChange={e => setData({ ...data, keywordsMedia: e.target.value })}
+								placeholder="Add Keywords: #Free Speech, democracy"
+							/>
+						</Col>
+					</Row>
+					<Row className="justify-content-center petition-form-block">
+						<Col>
+							<button className="petition-save-preview-btn">Save and Preview</button>
+						</Col>
+					</Row>
 				</Col>
 			</Row>
+			<InYourArea />
+			<SuccessStories />
+			<Features />
+			<KeyChangeMakers />
 		</Container>
 	);
 }

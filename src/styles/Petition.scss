@@ -1,0 +1,124 @@
+@import "./theme.scss";
+
+.petition {
+	width: 900px;
+	max-width: 90vw;
+	margin: auto;
+	padding: $xsectionPadding 0;
+}
+.petition-form-block {
+	margin-top: 4rem;
+}
+.petition-issue-container {
+	padding: 1.5rem;
+}
+.petition-issue-container-active {
+	background-color: $primaryColor;
+	color: $white;
+}
+.petition-issue {
+	background-color: transparent;
+	border: none;
+}
+.petition-issue-title {
+	margin-top: 1rem;
+	text-align: center;
+	white-space: nowrap;
+	margin-bottom: -0.3rem;
+}
+
+.petition-title-wrapper {
+
+}
+.petition-title-wrapper-title {
+	font-size: $xlargeFont;
+	color: $black;
+	margin-bottom: 0.5rem;
+}
+.petition-title-wrapper-subtitle {
+	color: $darkGrey;
+	margin-bottom: 0.5rem;
+}
+
+.petition-goal, .petition-target {
+	border-right: none;
+}
+
+
+.files-input {
+	width: 100%;
+	height: 200px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border: 1px dashed #ced4da;
+	border-radius: 4px;
+}
+.files-input-border {
+	height: 1px;
+	width: 80%;
+	background-color: #ced4da;
+	margin-bottom: 1.5rem;
+}
+.files-input-group {
+	width: 500px;
+	max-width: 70%;
+}
+.files-input-url {
+	
+}
+.files-input-btn {
+	background-color: $primaryColor;
+	color: $white;
+	cursor: pointer;
+	transition: transform 0.2s;
+}
+.files-input-btn:hover {
+	background-color: $white;
+	color: $primaryColor;
+}
+input[type="file"] {
+    display: none;
+}
+.custom-file-upload {
+	height: 35px;
+	width: 200px;
+	max-width: 70%;
+	color: $white;
+	border-radius: 4px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    cursor: pointer;
+	margin-bottom: 1.5rem;
+	background-color: $primaryColor;
+	font-size: $largeFont;
+}
+.custom-file-upload:hover {
+	background-color: $white;
+	border: 1px solid #ced4da;
+	color: $primaryColor;
+}
+.file-preview {
+  margin: 0 10px;
+}
+.custom-file-upload-btn {
+	z-index: 2;
+	background-color: $white !important;
+}
+.petition-save-preview-btn {
+	background-color: $primaryColor;
+	border: none;
+	color: $white;
+	width: 100%;
+	height: 60px;
+	border-radius: 4px;
+	max-width: 100%;
+	font-size: $largeFont;
+	transition: transform 0.1s;
+}
+
+.petition-save-preview-btn:hover {
+	transform: translateY(0.2rem);
+}
