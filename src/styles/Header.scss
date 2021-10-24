@@ -1,13 +1,14 @@
 @import "./theme.scss";
 
-.header-wrapper {
-	background-color: $darkPrimaryColor;
-}
-
 .header {
+	position: fixed;
+	width: 100%;
+	top: 0;
 	align-items: center;
-	height: 120px;
+	height: 80px;
 	background-color: $darkPrimaryColor;
+	padding: 0 1.7rem;
+	z-index: 10;
 }
 
 .header-btn {
@@ -25,7 +26,7 @@
 }
 
 .header-btn-inner {
-	padding: 1rem;
+	padding: 0.7rem 0.8rem;
 }
 
 .header-btn:hover {
@@ -38,12 +39,12 @@
 
 .login-icon {
 	color: $secondaryColor;
-	margin-right: 1.5rem;
-	font-size: 2.2rem;
+	margin-right: 2rem;
+	font-size: 2rem;
 	display: flex;
 	align-items: center;
 	cursor: pointer;
-	transition: transform 0.05s;
+	transition: transform 0.1s;
 }
 
 .login-icon:hover {

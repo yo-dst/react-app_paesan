@@ -1,0 +1,29 @@
+@import "./theme.scss";
+
+.search-popover-icon {
+	color: $secondaryColor;
+	font-size: 1.7rem;
+	transition: transform 0.1s;
+	cursor: pointer;
+}
+
+.search-popover-icon:hover {
+	transform: scale(1.1);
+}
+.search-popover {
+	position: absolute;
+	margin-top: 1.5rem;
+	right: 0;
+	z-index: 11;
+	background-color: $darkPrimaryColor;
+	border-radius: 0 0 6px 6px;
+}
+.search-popover-header {
+	color: $white;
+	padding: 0.5rem;
+	border-radius: 0 0 6px 6px;
+	width: 200px;
+}
+.search-popover-body {
+	
+}

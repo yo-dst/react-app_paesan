@@ -5,12 +5,13 @@ import { Link } from "react-router-dom";
 
 import '../styles/Header.scss';
 import SearchBar from "./SearchBar";
+import SearchPopover from "./SearchPopover";
 
 const Header = () => {
     return (
         <>
-            <Container fluid className="header-wrapper">
-                <Row className="centered-content header">
+            <Container fluid>
+                <Row className="header">
                     <Col className="d-flex align-items-center">
                         <Link to="signal-risk" className="header-btn" style={{marginRight: "1.5rem"}}>
                             <div className="header-btn-inner">Signal a risk</div>
@@ -26,9 +27,9 @@ const Header = () => {
                     </Col>
                     <Col className="d-flex align-items-center justify-content-end">
                         <Link to="/login">
-                            <FontAwesomeIcon className="login-icon" icon={faUser} />
+                            <FontAwesomeIcon className="login-icon" icon={faUser} inverse />
                         </Link>
-                        <SearchBar />
+                        <SearchPopover />
                     </Col>
                 </Row>
             </Container>

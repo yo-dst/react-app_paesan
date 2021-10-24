@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
-import { Container, Row, Col, Card, Form, InputGroup, Overlay, Popover } from "react-bootstrap";
+import { Container, Row, Col, Card, Form, InputGroup, OverlayTrigger, Popover } from "react-bootstrap";
 import { faQuestionCircle } from "@fortawesome/free-regular-svg-icons";
 
 import "../styles/Petition.scss";
@@ -45,6 +45,34 @@ const issuesContent = [
 		img: "https://picsum.photos/600"
 	}
 ];
+
+const goalHelp = [
+	{
+		question: "keep it short to the point",
+		answer: 'Example “Buy organic, free-range eggs for your restaurants” Not: “Stop the inhumane treatment of chickens inbattery farms that are forced…”'
+	},
+	{
+		question: "Focus on the solution",
+		answer: "Example: “Raise theminimum wage in manchester to $15 an hour”. Not: “Stop rising inequality in Manchester”"
+	},
+	{
+		question: "Communicate urgency",
+		answer: "Example:“Approuve life-saving medication for my daughter’s before it’s too late”;"
+	},
+];
+
+const goalPopover = (
+	<Popover id="popover-help">
+		<Popover.Content>
+			{goalHelp.map(item => (
+				<div className="popover-help-item" key={item.question}>
+					<div className="popover-help-point">{item.question}</div>
+					<div className="popover-help-example">{item.answer}</div>
+				</div>
+			))}
+		</Popover.Content>
+  	</Popover>
+);
 
 const PetitionTitle = ({ title, subtitle }) => {
 	return (
@@ -154,7 +182,9 @@ const SignalRiskScreen = () => {
 									placeholder="What do you whant to achieve?"
 								/>
 								<InputGroup.Text style={{background: "transparent"}}>
-									<FontAwesomeIcon icon={faQuestionCircle} style={{fontSize: "1.2rem"}} />
+									<OverlayTrigger trigger="click" placement="bottom-end" overlay={goalPopover}>
+										<FontAwesomeIcon icon={faQuestionCircle} style={{fontSize: "1.2rem"}} />
+									</OverlayTrigger>
 								</InputGroup.Text>
 							</InputGroup>
 						</Col>

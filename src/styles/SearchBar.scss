@@ -1,13 +1,11 @@
 @import "./theme.scss";
 
 .search-bar {
-	border: 1px solid $secondaryColor;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	padding: 0.5rem 1rem;
 	border-radius: 40px;
-	width: 70%;
 	cursor: text;
 }
 

@@ -12,8 +12,11 @@
 .petition-issue-container {
 	padding: 1.5rem;
 }
+.petition-issue-container:hover {
+	background-color: $darkWhite;
+}
 .petition-issue-container-active {
-	background-color: $primaryColor;
+	background-color: $primaryColor !important;
 	color: $white;
 }
 .petition-issue {
@@ -121,4 +124,9 @@ input[type="file"] {
 
 .petition-save-preview-btn:hover {
 	transform: translateY(0.2rem);
+}
+
+#popover-help {
+	background-color: $darkWhite;
+	width: 100%;
 }
