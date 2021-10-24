@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
-import { Container, Row, Col, Card, Form, InputGroup } from "react-bootstrap";
+import { Container, Row, Col, Card, Form, InputGroup, Overlay, Popover } from "react-bootstrap";
 import { faQuestionCircle } from "@fortawesome/free-regular-svg-icons";
 
 import "../styles/Petition.scss";
@@ -9,7 +9,7 @@ import InYourArea from "./InYourArea";
 import SuccessStories from "./SuccessStories";
 import Features from "./Features";
 import KeyChangeMakers from "./KeyChangeMakers";
-
+import HelpPopover from "./HelpPopover";
 
 const issuesContent = [
 	{
