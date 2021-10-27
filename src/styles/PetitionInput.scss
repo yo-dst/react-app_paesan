@@ -1,0 +1,28 @@
+@import "./theme.scss";
+
+.petition-input {
+
+}
+.petition-input-clue {
+	cursor: pointer;
+	background-color: transparent;
+	color: $darkPrimaryColor;
+}
+.petition-input-clue:hover {
+	border-bottom-right-radius: 0;
+	background-color: $darkPrimaryColor;
+	color: $white;
+}
+.petition-input-btn {
+	height: 100%;
+	border: none;
+	border-radius: 4px;
+	padding: 0 1rem;
+	color: $white;
+	background-color: $primaryColor;
+	border: 1px solid $primaryColor;
+}
+.petition-input-btn:hover {
+	background-color: $white;
+	color: $primaryColor;
+}

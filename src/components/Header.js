@@ -4,6 +4,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 import '../styles/Header.scss';
+import logo from "../images/logo.png"
 import SearchBar from "./SearchBar";
 import SearchPopover from "./SearchPopover";
 
@@ -21,8 +22,8 @@ const Header = () => {
                         </Link>
                     </Col>
                     <Col className="d-flex align-items-center justify-content-center">
-                        <Link to="/">
-                            <img src="https://picsum.photos/300/100" alt="unknown" height="80px" />
+                        <Link to="/" >
+                            <img src={logo} alt="unknown" height="110px" />
                         </Link>
                     </Col>
                     <Col className="d-flex align-items-center justify-content-end">

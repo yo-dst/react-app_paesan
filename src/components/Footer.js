@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faTwitter, faInstagram, faLinkedin, faSkype } from "@fortawesome/free-brands-svg-icons";
 
 import '../styles/Footer.scss';
+import logo from "../images/logo.png";
 import FooterNavbar from './FooterNavbar';
 
 const footerBotContent = [
@@ -142,7 +143,7 @@ const Footer = () => {
                         <Col xs={12} className="footer-top">
                             <Row className="justify-content-around">
                                 <Col xs={12} md={5} lg={4} className="footer-top-block">
-                                    <img src="https://picsum.photos/300/100" alt="unknown" width="80%" />
+                                    <img src={logo} alt="unknown" width="80%" style={{marginLeft: "-1rem"}} />
                                     <div className="footer-top-txt">
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel interdum ex.
                                     </div>

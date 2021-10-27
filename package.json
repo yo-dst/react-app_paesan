@@ -20,6 +20,8 @@
     "react-slick": "^0.28.1",
     "sass": "^1.42.1",
     "sass-loader": "^12.1.0",
+    "slate": "^0.66.5",
+    "slate-react": "^0.68.1",
     "slick-carousel": "^1.8.1",
     "video-react": "^0.14.1",
     "web-vitals": "^1.0.1"

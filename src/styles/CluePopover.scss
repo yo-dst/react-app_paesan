@@ -1,0 +1,26 @@
+@import "./theme.scss";
+
+#clue-popover {
+	width: 50vw !important;
+	max-width: none !important;
+	margin: -0.04rem -0.03rem 0 0 !important;
+	border-radius: 0 !important;
+	background-color: $darkPrimaryColor !important;
+	//border: 1px solid $primaryColor !important;
+}
+.clue-popover-clue {
+	font-size: $largeFont;
+	color: $white;
+	align-items: center;
+}
+.clue-popover-details {
+	color: $white;
+	font-style: italic;
+}
+.clue-popover-clue-puce {
+	height: 0.6rem;
+	width: 0.6rem;
+	background-color: $secondaryColor;
+	border-radius: 50%;
+	margin-right: 0.5rem;
+}
