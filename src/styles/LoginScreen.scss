@@ -1,0 +1,9 @@
+@import "./theme.scss";
+
+.login-screen {
+	padding: $xsectionPadding 0;
+}
+.login-screen-title {
+	text-align: center;
+	font-size: $xxxlargeFont;
+}
