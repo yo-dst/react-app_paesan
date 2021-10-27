@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 
 import '../styles/Header.scss';
 import logo from "../images/logo.png"
-import SearchBar from "./SearchBar";
 import SearchPopover from "./SearchPopover";
 
 const Header = () => {

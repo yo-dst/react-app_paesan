@@ -1,3 +1,4 @@
+/*
 import { createEditor, Editor, Transforms } from "slate";
 import { Slate, Editable, withReact } from "slate-react";
 import { useMemo, useCallback } from "react";
@@ -52,4 +53,5 @@ const RichText = ({ data, setData }) => {
 }
 
 export default RichText;
+*/
 

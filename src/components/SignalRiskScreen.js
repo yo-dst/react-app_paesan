@@ -12,7 +12,7 @@ import Features from "./Features";
 import KeyChangeMakers from "./KeyChangeMakers";
 import CluePopover from "./CluePopover";
 import PetitionInput from "./PetitionInput";
-import RichText from "./RichText";
+import CkEditorComponent from "./CkEditorComponent";
 
 const issuesContent = [
 	{
@@ -79,6 +79,7 @@ const targetClues = [
 	},
 ];
 
+/*
 const descriptionClues = [
 	{
 		clue: "Describe the people involved and the problem they are facing",
@@ -97,6 +98,7 @@ const descriptionClues = [
 		details: "Don't bully, use hate speech, threaten violence or make things up."
 	}
 ];
+*/
 
 const mediaClues = [
 	{
@@ -253,7 +255,19 @@ const SignalRiskScreen = () => {
 					</Row>
 					<Row className="justify-content-center petition-form-block">
 						<Col>
-							<RichText data={data} setData={setData} />
+							<PetitionTitle
+								title="Describe the problem you want to solve"
+								subtitle="People are more likely to support your cause if it’s clear why you care. explain how this change will impact you, your family or you community."
+							/>
+							<CkEditorComponent />
+							<Row className="mt-3">
+								<Col className="richtext-bottom-txt">
+									The most successful causes tend to be atleast 3 paragraphs long(about 1000 characters in length).
+								</Col>
+								<Col xs="auto" style={{marginLeft: "1rem"}}>
+									<button className="petition-input-btn">Continue</button>
+								</Col>
+							</Row>
 						</Col>
 					</Row>
 					<Row className="justify-content-center petition-form-block">
