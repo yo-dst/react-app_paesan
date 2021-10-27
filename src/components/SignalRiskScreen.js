@@ -3,7 +3,6 @@ import { useState } from "react";
 import { Container, Row, Col, Card, Form, InputGroup, OverlayTrigger } from "react-bootstrap";
 import { faInfoCircle, faSearch } from "@fortawesome/free-solid-svg-icons";
 
-
 import "../styles/Petition.scss";
 import Navbar from "./Navbar";
 import InYourArea from "./InYourArea";
@@ -12,7 +11,7 @@ import Features from "./Features";
 import KeyChangeMakers from "./KeyChangeMakers";
 import CluePopover from "./CluePopover";
 import PetitionInput from "./PetitionInput";
-import CkEditorComponent from "./CkEditorComponent";
+import RichTextEditor from "./RichTextEditor";
 
 const issuesContent = [
 	{
@@ -79,7 +78,6 @@ const targetClues = [
 	},
 ];
 
-/*
 const descriptionClues = [
 	{
 		clue: "Describe the people involved and the problem they are facing",
@@ -98,7 +96,6 @@ const descriptionClues = [
 		details: "Don't bully, use hate speech, threaten violence or make things up."
 	}
 ];
-*/
 
 const mediaClues = [
 	{
@@ -128,12 +125,13 @@ const PetitionTitle = ({ title, subtitle }) => {
 	);
 }
 
-const FilesInput = ({ data, setData }) => {
+// RETAFF DESSUS
+const FilesInput = ({ state, setState }) => {
 	const [urls, setUrls] = useState("");
 	
 	const onChange = (e) => {
 		let filesArr = Array.prototype.slice.call(e.target.files);
-		setData({ ...data, files: filesArr });
+		setState({ ...state, files: filesArr });
 	}
 
 	return (
@@ -152,10 +150,10 @@ const FilesInput = ({ data, setData }) => {
 				placeholder="http://"
 				clues={mediaClues}
 				btnTxt="Add"
-				data={urls}
-				setData={e => setUrls(e.target.value)}
+				state={urls}
+				setState={e => setUrls(e.target.value)}
 			/>
-			{data.files.map(file => (
+			{state.files.map(file => (
 				<div>{file.name}</div>
 			))}
 		</div>
@@ -163,17 +161,12 @@ const FilesInput = ({ data, setData }) => {
 }
 
 const SignalRiskScreen = () => {
-	const [data, setData] = useState({
+	const [state, setState] = useState({
 		issueSelected: null,
 		keywords: "",
 		title: "",
 		target: "",
-		description: [
-			{
-				type: "paragraph",
-				children: [{ text: "A line of text in a paragraph."}]
-			}
-		],
+		description: "",
 		files: [],
 		urls: [],
 		keywordsMedia: ""
@@ -192,9 +185,9 @@ const SignalRiskScreen = () => {
 						{issuesContent.map((item, index) => (
 							<Col 
 								md={3}
-								className={`petition-issue-container ${index ===data.issueSelected ? "petition-issue-container-active" : null}`} 
+								className={`petition-issue-container ${index ===state.issueSelected ? "petition-issue-container-active" : null}`} 
 								key={`petition-issue-${index}`}
-								onClick={e => setData({ ...data, issueSelected: index })}
+								onClick={e => setState({ ...state, issueSelected: index })}
 							>
 								<Card className="petition-issue">
 									<Card.Img variant="top" src={item.img} style={{borderRadius: "50%"}} />
@@ -211,8 +204,8 @@ const SignalRiskScreen = () => {
 								<Form.Control
 									className="petition-keywords"
 									type="text"
-									value={data.keywords}
-									onChange={e => setData({ ...data, keywords: e.target.value })}
+									value={state.keywords}
+									onChange={e => setState({ ...state, keywords: e.target.value })}
 									placeholder="Search by keywords: #Free Speech, democracy"
 								/>
 								<InputGroup.Text className="petition-input-clue">
@@ -230,10 +223,23 @@ const SignalRiskScreen = () => {
 							<PetitionInput
 								placeholder="What do you whant to achieve?"
 								clues={titleClues}
-								data={data.title}
-								setData={e => setData({ ...data, title: e.target.value})}
+								state={state.title}
+								setState={e => setState({ ...state, title: e.target.value})}
 								btnTxt="Continue"
 								showClues={true}
+							/>
+						</Col>
+					</Row>
+					<Row className="justify-content-center petition-form-block">
+						<Col>
+							<PetitionTitle
+								title="Describe the problem you want to solve"
+								subtitle="People are more likely to support your cause if it’s clear why you care. explain how this change will impact you, your family or you community."
+							/>
+							<RichTextEditor
+								state={state}
+								setState={setState}
+								clues={descriptionClues}
 							/>
 						</Col>
 					</Row>
@@ -246,8 +252,8 @@ const SignalRiskScreen = () => {
 							<PetitionInput
 								placeholder="Petition target (e.g mayor)"
 								clues={targetClues}
-								data={data.target}
-								setData={e => setData({ ...data, target: e.target.value})}
+								state={state.target}
+								setState={e => setState({ ...state, target: e.target.value})}
 								btnTxt="Continue"
 								showClues={true}
 							/>
@@ -256,27 +262,10 @@ const SignalRiskScreen = () => {
 					<Row className="justify-content-center petition-form-block">
 						<Col>
 							<PetitionTitle
-								title="Describe the problem you want to solve"
-								subtitle="People are more likely to support your cause if it’s clear why you care. explain how this change will impact you, your family or you community."
-							/>
-							<CkEditorComponent />
-							<Row className="mt-3">
-								<Col className="richtext-bottom-txt">
-									The most successful causes tend to be atleast 3 paragraphs long(about 1000 characters in length).
-								</Col>
-								<Col xs="auto" style={{marginLeft: "1rem"}}>
-									<button className="petition-input-btn">Continue</button>
-								</Col>
-							</Row>
-						</Col>
-					</Row>
-					<Row className="justify-content-center petition-form-block">
-						<Col>
-							<PetitionTitle
 								title="Add A Photo Or Video"
 								subtitle="Petitions with a photo or video receive six times more signatures than those without. Include one that captures the emotion of your story."
 							/>
-							<FilesInput data={data} setData={setData}/>
+							<FilesInput state={state} setState={setState}/>
 						</Col>
 					</Row>
 					<Row className="justify-content-center mt-4">
@@ -284,8 +273,8 @@ const SignalRiskScreen = () => {
 							<PetitionInput
 								placeholder="Add keywords: #Free speech, democracy, #sovreignty"
 								clues={targetClues}
-								data={data.keywordsMedia}
-								setData={e => setData({ ...data, keywordsMedia: e.target.value})}
+								state={state.keywordsMedia}
+								setState={e => setState({ ...state, keywordsMedia: e.target.value})}
 								btnTxt="Add"
 								btnClass="petition-keywords-media-btn"
 							/>
