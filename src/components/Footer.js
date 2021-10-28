@@ -142,8 +142,8 @@ const Footer = () => {
                     <Row className="centered-content">
                         <Col xs={12} className="footer-top">
                             <Row className="justify-content-around">
-                                <Col xs={12} md={5} lg={4} className="footer-top-block">
-                                    <img src={logo} alt="unknown" width="80%" style={{marginLeft: "-1rem"}} />
+                                <Col xs={11} sm={5} xl={4} className="footer-top-block">
+                                    <img src={logo} alt="unknown" width="80%" className="footer-top-logo" />
                                     <div className="footer-top-txt">
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel interdum ex.
                                     </div>
@@ -156,7 +156,7 @@ const Footer = () => {
                                     </div>
                                 </Col>
                                 {footerTopContent.map(item => (
-                                    <Col xs={12} md={5} lg={2} key={item.title} className="footer-top-block">
+                                    <Col xs={11} sm={5} xl={2} key={item.title} className="footer-top-block">
                                         <div className="footer-top-list">
                                             <div className="footer-top-list-title">{item.title}</div>
                                             {item.items.map(item => (

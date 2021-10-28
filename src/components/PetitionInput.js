@@ -12,7 +12,8 @@ const PetitionInput = (props) => {
 		btnTxt,
 		data,
 		setData,
-		showClues
+		showClues,
+		inline
 	} = props;
 
 	return (
@@ -37,8 +38,8 @@ const PetitionInput = (props) => {
 					}
 				</InputGroup>
 			</Col>
-			<Col xs="auto">
-				<button className={props.btnClass ? props.btnClass : "petition-input-btn"}>{btnTxt}</button>
+			<Col xs={inline ? "auto" : 12} sm="auto">
+				<button className={`${props.btnClass ? props.btnClass : "petition-input-btn"} ${inline ? null : "petition-input-btn-xs"}`}>{btnTxt}</button>
 			</Col>
 		</Row>
 	);

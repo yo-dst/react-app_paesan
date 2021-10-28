@@ -51,6 +51,7 @@
 	font-size: $largeFont;
 	transition: transform 1s;
 	color: $xlightGrey;
+	margin-left: 1rem;
 }
 
 .features-upgrade:hover {
@@ -70,4 +71,10 @@
 	border-radius: 6px;
 	background-color: $secondaryColor;
 	animation: upgradeUnderline 4s infinite 1s ease-in-out;
+}
+
+@media screen and (max-width: 576px) {
+	.features-upgrade {
+		margin-left: 0rem !important;
+	}
 }

@@ -6,7 +6,8 @@
 }
 
 .wewatch {
-    padding: $sectionPadding 0;
+    padding-top: $xxsectionPadding;
+	padding-bottom: $sectionPadding;
     color: $black;
     margin: auto;
     a {

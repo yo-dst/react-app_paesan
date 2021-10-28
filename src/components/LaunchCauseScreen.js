@@ -146,16 +146,20 @@ const FilesInput = ({ state, setState }) => {
 				Choose a file
 			</label>
 			<div className="files-input-border"></div>
-			<PetitionInput
-				placeholder="http://"
-				clues={mediaClues}
-				btnTxt="Add"
-				state={urls}
-				setState={e => setUrls(e.target.value)}
-			/>
-			{state.files.map(file => (
-				<div>{file.name}</div>
-			))}
+			<div style={{width: "80%", maxWidth: "450px"}}>
+				<PetitionInput
+					placeholder="http://"
+					clues={mediaClues}
+					btnTxt="Add"
+					state={urls}
+					setState={e => setUrls(e.target.value)}
+					inline={true}
+				/>
+				{state.files.map(file => (
+					<div>{file.name}</div>
+				))}
+			</div>
+			
 		</div>
 	);
 }
@@ -181,10 +185,10 @@ const SignalRiskScreen = () => {
 						title="What Kind Of Issue You Want To Solve?"
 						subtitle="Selecting a topic allows change.org to recommend you position to interested supporters"
 					/>
-					<Row className="justify-content-start mt-3">
+					<Row className="justify-content-center mt-3">
 						{issuesContent.map((item, index) => (
 							<Col 
-								md={3}
+								xs={12} sm={6} md={3}
 								className={`petition-issue-container ${index ===state.issueSelected ? "petition-issue-container-active" : null}`} 
 								key={`petition-issue-${index}`}
 								onClick={e => setState({ ...state, issueSelected: index })}

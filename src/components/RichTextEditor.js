@@ -30,7 +30,7 @@ const RichTextEditor = ({ state, setState, clues }) => {
 					</div>
 				</OverlayTrigger>
 			</div>
-			<Row className="mt-3 align-items-center">
+			<Row className="richtext-editor-bottom">
 				<Col className="richtext-editor-bottom-txt">
 					<div className="d-flex align-items-center">
 						<div className="richtext-editor-bottom-icon-wrapper">
@@ -39,7 +39,7 @@ const RichTextEditor = ({ state, setState, clues }) => {
 						<div>The most successful causes tend to be atleast 3 paragraphs long(about 1000 characters in length).</div>
 					</div>
 				</Col>
-				<Col xs="auto" style={{marginLeft: "1rem"}}>
+				<Col xs={12} sm="auto" className="d-flex justify-content-end">
 					<button className="richtext-editor-btn">Continue</button>
 				</Col>
 			</Row>

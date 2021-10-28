@@ -1,9 +1,12 @@
 @import "./theme.scss";
 
 .key-makers {
-	padding: $xsectionPadding 0;
+	padding-top: $sectionPadding;
+	padding-bottom: $xxsectionPadding;
 	justify-content: space-between;
 	align-items: center;
+	background-color: $darkPrimaryColor;
+	border-top: 1px solid $white;
 }
 
 .key-makers-title {
@@ -18,14 +21,14 @@
 }
 
 .key-makers-subtitle {
-	color: $black;
+	color: $darkWhite;
 	font-size: $xlargeFont;
 	margin-top: 1rem;
 	font-weight: bold;
 }
 
 .key-makers-txt {
-	color: $black;
+	color: $xlightGrey;
 	margin-top: 1rem;
 	font-size: $largeFont;
 	font-style: italic;
@@ -38,7 +41,7 @@
 }
 
 .key-makers-makers-border {
-	border: 2px solid $darkPrimaryColor;
+	border: 1px dashed $primaryColor;
 	height: 60%;
 	width: 85%;
 	position: absolute;
@@ -54,7 +57,7 @@
 	transition: transform 0.1s;
 }
 
-.key-maker:hover {
+.key-maker:hover, .makers-mobile-item:hover {
 	transform: scale(1.05);
 }
 
@@ -78,12 +81,12 @@
 	padding: 0 2rem;
 }
 .makers-border-mobile {
-	border: 2px solid $darkPrimaryColor;
-	width: 90%;
-	height: 80%;
+	border: 1px dashed $primaryColor;
+	width: 92%;
+	height: 70%;
 	position: absolute;
-	top: 10%;
-	left: 5%;
+	top: 15%;
+	left: 4%;
 }
 .makers-mobile-item {
 	margin-top: 3rem;
@@ -91,6 +94,11 @@
 	position: relative;
 	padding-bottom: 2rem;
 	padding-right: 2rem;
+	transition: transform 0.2s;
+	cursor: pointer;
+}
+.makers-mobile-item {
+
 }
 .makers-mobile-item-title {
 	background-color: $white;
@@ -99,7 +107,7 @@
 	position: absolute;
 	right: 0;
 	bottom: 0;
-
+	border: 1px solid $primaryColor;
 }
 .makers-mobile-item-title-name {
 	font-weight: bold;
@@ -136,16 +144,16 @@
 
 @media screen and (max-width: 500px) {
 	.key-makers-title {
-		padding: 1.5rem 0.5rem;
+		padding: 1.5rem 1rem;
 	}
 }
 
 @media screen and (max-width: 576px) {
 	.makers-border-mobile {
-		width: 2px;
+		width: 1px;
 		border: none;
 		height: 80%;
-		background-color: $darkPrimaryColor;
+		background-color: $primaryColor;
 		left: 35%;
 		top: 10%;
 	}

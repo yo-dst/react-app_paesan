@@ -110,13 +110,13 @@ const Makers = () => {
 
 const KeyChangeMakers = () => {
 	return (
-		<Row className="centered-content key-makers">
-			<Col xs={12}>
+		<Row className="key-makers">
+			<Col xs={12} className="centered-content">
 				<Row className="align-items-center  justify-content-between">
 					<Col xl={3}>
 						<Row>
-							<Col xs={5} xl={12} className="key-makers-title">Key Change<br/>Makers</Col>
-							<Col xs={7} xl={12}>
+							<Col xs={12} md={5} xl={12} className="key-makers-title">Key Change<br/>Makers</Col>
+							<Col xs={12} md={7} xl={12}>
 								<div className="key-makers-subtitle">Get Inspired by the voice and experience of lifetime militants.</div>
 								<div className="key-makers-txt">Get pratical guidance find mentors.</div>
 							</Col>

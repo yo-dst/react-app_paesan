@@ -2,11 +2,12 @@
 
 #clue-popover {
 	width: 600px !important;
-	max-width: 50vw !important;
+	max-width: 80vw !important;
 	margin: -0.04rem -0.03rem 0 0 !important;
 	border-radius: 0 !important;
 	background-color: $darkPrimaryColor !important;
-	//border: 1px solid $primaryColor !important;
+	//border: 1px solid $white !important;
+	//box-shadow: 0 0 10px $darkPrimaryColor !important;
 }
 .clue-popover-clue {
 	font-size: $largeFont;

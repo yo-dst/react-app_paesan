@@ -100,8 +100,11 @@
 .footer-top-block {
     padding-left: 2rem;
 }
+.footer-top-logo {
+	margin-left: -1rem;
+}
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1199px) {
     .footer-top {
         padding: $sectionPadding 0;
     }
@@ -114,4 +117,10 @@
     .footer-bot {
         margin-top: 2rem;
     }
+}
+
+@media screen and (max-width: 575px) {
+	.footer-top-logo {
+		margin-left: -2rem;
+	}
 }
