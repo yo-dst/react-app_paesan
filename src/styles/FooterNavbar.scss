@@ -1,23 +1,25 @@
 @import "./theme.scss";
 
 .footer-navbar {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    padding: 0 4rem;
     background-color: $secondaryColor;
     padding: 3vh 0;
     margin-top: 2rem;
 }
 .footer-navbar-item {
     transition: transform 0.1s;
-    text-decoration: none;
-    color: $black;
-    font-size: 1.2rem;
-    white-space: nowrap;
+    a {
+        font-size: $largeFont;
+        text-decoration: none;
+        color: $black;
+        white-space: nowrap;
+    }
 }
 .footer-navbar-item:hover {
-    transform: scale(1.07);
     color: #000;
+    transform: scale(1.07);
+    
 }
 
 @media screen and (max-width: 900px) {

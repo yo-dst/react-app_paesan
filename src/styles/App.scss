@@ -22,6 +22,10 @@ body {
     
 }
 
+.underline-on-hover:hover {
+    text-decoration: underline !important;
+}
+
 .centered-content {
     width: 1280px;
     max-width: 90vw;
@@ -32,4 +36,15 @@ body {
     html {
         font-size: 15px;
     }
+}
+
+@media screen and (max-width: 991px) {
+    .app {
+        padding-top: 0;
+    }
+}
+
+.test {
+    position: sticky;
+    top: 0;
 }

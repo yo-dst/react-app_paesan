@@ -4,7 +4,6 @@ import { faFacebook, faTwitter, faInstagram, faLinkedin, faSkype } from "@fortaw
 
 import '../styles/Footer.scss';
 import logo from "../images/logo.png";
-import FooterNavbar from './FooterNavbar';
 
 const footerBotContent = [
     {
@@ -136,8 +135,7 @@ const socialMedia = [
 
 const Footer = () => {
     return (
-        <>  
-            <FooterNavbar />
+        <>
             <Container fluid className="footer">
                     <Row className="centered-content">
                         <Col xs={12} className="footer-top">

@@ -15,6 +15,9 @@ import FreshFavorites from "./FreshFavorites";
 import Pagination from "./Pagination";
 import KeyChangeMakers from "./KeyChangeMakers";
 import Navbar from "./Navbar";
+import WeWatch from "./WeWatch";
+import FooterNavbar from "./FooterNavbar";
+import PetitionsButtons from "./PetitionsButtons";
 
 const urgentContent = [
     {
@@ -74,6 +77,7 @@ const HomeScreen = () => {
 	return (
 		<Container fluid>
 			<Navbar />
+			<PetitionsButtons />
 			<Row className="centered-content landing">
 				<Col xs={12} lg={6} className="featured-cause">
 					<div className="featured-cause-section-title">
@@ -145,6 +149,8 @@ const HomeScreen = () => {
 			<Features />
 			<KeyChangeMakers />
             <SuccessStories />
+			<WeWatch />
+			<FooterNavbar />
 		</Container>
 	);
 }

@@ -1,14 +1,15 @@
 @import "./theme.scss";
 
-.login-screen {
+.signup-screen {
 	padding: $xxsectionPadding 0;
+	justify-content: center;
 }
-.login-screen-title {
+.signup-screen-title {
 	text-align: center;
 	font-size: $xxlargeFont;
 	margin-bottom: 3rem;
 }
-.login-screen-register {
+.signup-screen-register {
 	text-align: center;
 	font-size: $largeFont;
 	margin-bottom: 3rem;
@@ -17,11 +18,11 @@
 		color: $primaryColor
 	}
 }
-.login-screen-input {
+.signup-screen-input {
 	width: 80%;
 	margin-bottom: 1.5rem;
 }
-.login-screen-btn {
+.signup-screen-btn {
 	width: 80%;
 	background-color: $primaryColor;
 	color: $white;
@@ -31,6 +32,6 @@
 	transition: transform 0.2s;
 	font-size: $largeFont;
 }
-.login-screen-btn:hover {
+.signup-screen-btn:hover {
 	transform: translateY(0.2rem);
 }

@@ -12,6 +12,7 @@ import KeyChangeMakers from "./KeyChangeMakers";
 import CluePopover from "./CluePopover";
 import PetitionInput from "./PetitionInput";
 import RichTextEditor from "./RichTextEditor";
+import WeWatch from "./WeWatch";
 
 const issuesContent = [
 	{
@@ -291,6 +292,7 @@ const SignalRiskScreen = () => {
 			<SuccessStories />
 			<Features />
 			<KeyChangeMakers />
+			<WeWatch />
 		</Container>
 	);
 }

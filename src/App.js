@@ -6,13 +6,12 @@ import { Switch, Route, Redirect } from "react-router-dom";
 import './styles/App.scss';
 import Header from "./components/Header";
 import Footer from './components/Footer';
-import WeWatch from './components/WeWatch';
 import HomeScreen from './components/HomeScreen';
 import LoginScreen from './components/LoginScreen';
-import RegisterScreen from './components/HomeScreen';
+import SignupScreen from './components/SignupScreen';
 import SignalRiskScreen from "./components/SignalRiskScreen";
 import LaunchCauseScreen from "./components/LaunchCauseScreen";
-
+import HeaderMobile from "./components/HeaderMobile";
 
 const routes = [
     {
@@ -24,8 +23,8 @@ const routes = [
         component: LoginScreen
     },
     {
-        path: "/register",
-        component: RegisterScreen
+        path: "/signup",
+        component: SignupScreen
     },
 	{
         path: "/signal-risk",
@@ -41,13 +40,13 @@ const App = () => {
     return (
         <div className="app">
             <Header />
+            <HeaderMobile />
                 <Switch>
                     {routes.map(route => (
                         <Route exact path={route.path} component={route.component} key={`router-${route.path}`} />
                     ))}
                     <Redirect to="/" />
                 </Switch>
-            <WeWatch />
             <Footer />
         </div>
     );

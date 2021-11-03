@@ -1,0 +1,39 @@
+@import "./theme.scss";
+
+.petitions-buttons {
+	display: none;
+	background-color: $white;
+	flex-wrap: nowrap;
+	width: 100vw !important;
+	z-index: 11;
+	//border-bottom: 2px solid $darkPrimaryColor;
+}
+.petitions-buttons-btn {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: $primaryColor;
+	transition: transform 0.1s;
+	font-weight: bold;
+	white-space: nowrap;
+	color: $white;
+	padding: 1rem 0.5rem;
+	font-size: 1.2rem;
+	text-decoration: none;
+	border-radius: 8px;
+	box-shadow: 0 0 4px $darkPrimaryColor;
+}
+.petitions-buttons-btn:hover {
+	transform: scale(1.01);
+	color: $white;
+	//background-color: $darkPrimaryColor;
+}
+
+@media screen and (max-width: 991px) {
+	.petitions-buttons {
+		display: flex;
+	}
+}

@@ -1,0 +1,69 @@
+@import "./theme.scss";
+
+.header-mobile-wrapper {
+	display: none;
+	z-index: 100;
+}
+
+.header-mobile {
+	background-color: $darkPrimaryColor;
+	align-items: center;
+	justify-content: space-between;
+	padding-bottom: 0.5rem;
+}
+.hamburger-btn {
+	border: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.5rem 0.7rem;
+	border-radius: 4px;
+	background-color: transparent;
+	transition: transform 0.15s;
+}
+.hamburger-btn:hover {
+	.hamburger-icon {
+		transform: scale(1.1);
+	}
+}
+.hamburger-icon {
+	font-size: 2rem;
+	color: $white;
+}
+.header-mobile-logo {
+	width: 200px;
+	max-width: 40vw;
+}
+.header-mobile-btn {
+	border: none;
+	background-color: transparent;
+}
+.header-mobile-btn:hover {
+	.header-mobile-icon {
+		transform: scale(1.1);
+	}
+}
+.header-mobile-icon {
+	color: $white;
+	font-size: 2rem;
+	transition: transform 0.15s;
+}
+
+.navbar-mobile-wrapper {
+	top: 0;
+	height: 100vh;
+	padding: 0;
+	margin: 0;
+}
+.navbar-mobile {
+	z-index: 11;
+	background-color: $darkPrimaryColor;
+	display: flex;
+	height: 400px;
+}
+
+@media screen and (max-width: 991px) {
+	.header-mobile-wrapper {
+		display: block;
+	}
+}
