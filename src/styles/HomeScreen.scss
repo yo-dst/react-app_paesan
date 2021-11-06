@@ -35,9 +35,9 @@
     cursor: pointer;
     padding: 1rem 3rem 1rem 3rem;
     border-radius: 6px;
-    background-color: $darkPrimaryColor;
+    background-color: $white;
     transition: transform 0.3s;
-    box-shadow: 0 0 7px $darkPrimaryColor;
+    //box-shadow: 0 0 7px $darkPrimaryColor;
 }
 
 .featured-cause-img {
@@ -45,7 +45,6 @@
 }
 
 .featured-cause:hover {
-    transform: scale(1.01);
     .featured-cause-img {
         filter: brightness(105%);
     }

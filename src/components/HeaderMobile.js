@@ -12,8 +12,8 @@ const NavbarMobile = ({ show }) => {
 	if (!show)
 		return (null);
 	return (
-		<Row className={`header-mobile-wrapper ${show ? "translate-navbar-mobile" : null}`}>
-			<Col className="header-mobile">
+		<Row className="navbar-mobile-wrapper translate-navbar-mobile">
+			<Col className="navbar-mobile">
 				{navItems.map((item, index) => (
 					<Link to={item.path} key={``}>{item.name}</Link>
 				))}

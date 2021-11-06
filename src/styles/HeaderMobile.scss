@@ -51,9 +51,12 @@
 
 .navbar-mobile-wrapper {
 	position: absolute;
-	bottom: 100%;
-	transform: translateY(100%);
+	left: 0;
+	transform: translateX(-100%);
 	transition: transform 1s;
+}
+.translate-navbar-mobile {
+	transform: translateX(100%);
 }
 .navbar-mobile {
 	z-index: 11;
