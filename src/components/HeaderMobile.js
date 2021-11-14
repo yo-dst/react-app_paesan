@@ -9,15 +9,14 @@ import "../styles/HeaderMobile.scss";
 import { navItems } from "../data";
 
 const NavbarMobile = ({ show }) => {
-	if (!show)
-		return (null);
 	return (
-		<Row className="navbar-mobile-wrapper translate-navbar-mobile">
-			<Col className="navbar-mobile">
-				{navItems.map((item, index) => (
+		<Row className={`navbar-mobile ${show ? "navbar-mobile-active" : null}`}>
+			{navItems.map((item, index) => (
+				<Col xs={12} className="navbar-mobile-item">
 					<Link to={item.path} key={``}>{item.name}</Link>
-				))}
-			</Col>
+				</Col>
+			))}
+			
 		</Row>
 	);
 }	
@@ -25,17 +24,24 @@ const NavbarMobile = ({ show }) => {
 const HeaderMobile = () => {
 	const [show, setShow] = useState(false);
 
+	const toggle = () => {
+
+	}
+
 	return (
 		<Container fluid className="header-mobile-wrapper">
 			<Row className="header-mobile">
 				<Col xs="auto">
-					<button className="hamburger-btn" onClick={e => setShow(!show)}>
-						{show ?
-							<FontAwesomeIcon icon={faTimes} className="hamburger-icon"/>
-							:
-							<FontAwesomeIcon icon={faBars} className="hamburger-icon"/>
-						}
-					</button>
+					<div style={{width: "2rem"}}>
+						<button className="hamburger-btn" onClick={e => setShow(!show)}>
+							{show ?
+								<FontAwesomeIcon icon={faTimes} className="hamburger-icon"/>
+								:
+								<FontAwesomeIcon icon={faBars} className="hamburger-icon"/>
+							}
+						</button>
+					</div>
+					
 				</Col>
 				<Col xs="auto" className="d-flex">
 					<Link to="/">
