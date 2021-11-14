@@ -2,9 +2,14 @@
 
 .landing {
     padding: $sectionPadding 0;
+	width: 1400px;
+    max-width: 90vw;
+    margin: auto;
+	margin-bottom: 5rem;
 }
 
 .qcic {
+	margin-top: 2rem;
 	padding: $sectionPadding 0;
 	a {
 		color: $black;
@@ -32,12 +37,8 @@
 }
 
 .featured-cause {
-    cursor: pointer;
-    padding: 1rem 3rem 1rem 3rem;
-    border-radius: 6px;
-    background-color: $white;
-    transition: transform 0.3s;
-    //box-shadow: 0 0 7px $darkPrimaryColor;
+	padding-right: 1.5rem;
+	padding-left: 0;
 }
 
 .featured-cause-img {
@@ -48,8 +49,17 @@
     .featured-cause-img {
         filter: brightness(105%);
     }
+	.featured-cause-body {
+		background-color: $darkWhite;
+	}
+	.featured-cause-progress-bar {
+		border-radius: 0;
+	}
 }
-
+.featured-cause-body {
+	padding: 0.5rem;
+	border-radius: 0 0 6px 6px;
+}
 .featured-cause-section-title {
     display: flex;
     align-items: center;
@@ -69,14 +79,14 @@
     font-size: $xxlargeFont;
     font-weight: bold;
 	white-space: nowrap;
-    color: $white;
+    color: $black;
 }
 
 .featured-cause-title {
     font-size: 1.6rem;
     font-weight: bold;
-    margin-top: 0.7rem;
-    color: $white;
+    //margin-top: 0.7rem;
+    color: $black;
 }
 
 .featured-cause-timeLeft {
@@ -88,14 +98,14 @@
 
 .featured-cause-txt {
     margin-top: 0.5rem;
-	color: $xlightGrey;
+	color: $xdarkGrey;
     font-size: 1.1rem;
 }
 
 .featured-cause-hashtags {
 	margin-top: 1rem;
     font-size: 1.1rem;
-    color: $white;
+    color: $black;
 }
 
 .featured-cause-participants {
@@ -110,7 +120,7 @@
 	margin-top: 0.3rem;
     font-style: italic;
     font-size: 1.1rem;
-    color: $xlightGrey;
+    color: $black;
 }
 
 .featured-cause-progress-bar {
@@ -120,7 +130,7 @@
 }
 
 .urgent {
-    padding: 1rem 1rem 1rem 3rem;
+	padding-left: 1.5rem;
 }
 .urgent-section-title {
     font-size: $xxlargeFont;
@@ -133,6 +143,9 @@
     transition: transform 0.3s;
     cursor: pointer;
     border-radius: 0 6px 6px 0;
+}
+.urgent-item-body {
+	padding-right: 1rem;
 }
 .urgent-item:hover {
     transform: translateX(0.5rem);
@@ -147,9 +160,13 @@
     font-weight: bold;
     margin-top: 0.2rem;
 }
+.urgent-txt  {
+	margin-top: 0.5rem;
+}
 .urgent-prog-bar {
     background-color: $xlightGrey;
     margin-top: 0.3rem;
+	margin-right: 1rem;
     height: 10px;
 }
 .urgent-participants {
@@ -185,12 +202,29 @@
     .title-square {
         width: 0.6rem;
     }
+	.urgent-item {
+		flex-direction: column;
+		width: 450px;
+		max-width: 80vw;
+	}
+	.urgent-img {
+		width: 100%;
+	}
+	.urgent-item-body {
+		padding-left: 0.5rem;
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem;
+	}
+	.urgent-prog-bar {
+		margin-right: 0;
+	}
 }
-
-@media screen and (max-width: 991px) {
-    .urgent {
-        margin-top: 2rem;
-        
-        padding-right: 3rem;
+@media screen and (max-width: 1200px) {
+    .featured-cause {
+		padding-right: 0;
+	}
+	.urgent {
+        margin-top: 5rem;
+        padding-left: 0;
     }
 }

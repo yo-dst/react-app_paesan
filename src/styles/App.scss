@@ -32,6 +32,10 @@ body {
     margin: auto;
 }
 
+.bg-darkwhite {
+	background-color: $darkWhite;
+}
+
 @media screen and (max-width: 576px) {
     html {
         font-size: 15px;
