@@ -102,6 +102,7 @@
 	flex-direction: column;
 }
 .mobile-menu-body-item {
+	font-size: 1.1rem;
 	padding-left: 1.5rem;
 	height: 60px;
 	text-decoration: none;
@@ -109,7 +110,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
-	//border-bottom: 1px solid $black;
+	//border-bottom: 2px solid $black;
 }
 .mobile-menu-body-item:hover {
 	color: $white;
