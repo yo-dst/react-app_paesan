@@ -46,22 +46,101 @@
 	transition: transform 0.15s;
 }
 
-.navbar-mobile {
+.mobile-menu {
+	z-index: 101;
 	position: fixed;
 	top: 0;
 	left: -100%;
-	width: 60vw;
 	height: 100vh;
-	z-index: 101;
-	transition: left 0.3s;
-	background-color: $white;
+	width: 60vw;
+	display: flex;
 	flex-direction: column;
+	background: $white;
+	transition: left 0.5s;
+	border-right: 2px solid $darkPrimaryColor;
 }
-.navbar-mobile-active {
+.mobile-menu-active {
 	left: 0;
 }
-.navbar-mobile-item {
-	border: 1px solid orange;
+.mobile-menu-header {
+	margin-bottom: 0.5rem;
+	padding: 1rem;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+.mobile-menu-close-btn {
+	border: none;
+	background-color: transparent;
+}
+.mobile-menu-close-btn:hover {
+	.mobile-menu-close-icon {
+		transform: scale(1.1);
+	}
+}
+.mobile-menu-close-icon {
+	font-size: 2rem;
+	color: $black;
+	transition: transform 0.15s;
+}
+.mobile-menu-search-link:hover {
+	.mobile-menu-search-icon {
+		transform: scale(1.1);
+	}
+}
+.mobile-menu-search-icon {
+	color: $black;
+	font-size: 1.75rem;
+	transition: transform 0.15s;
+}
+.mobile-menu-search-icon:hover {
+	color: $black;
+}
+.mobile-menu-body {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.mobile-menu-body-item {
+	padding-left: 1.5rem;
+	height: 60px;
+	text-decoration: none;
+	color: $black;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	//border-bottom: 1px solid $black;
+}
+.mobile-menu-body-item:hover {
+	color: $white;
+	background-color: $darkPrimaryColor;
+}
+.mobile-menu-footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0 1.5rem;
+}
+.mobile-menu-footer-btn {
+	text-align: center;
+	font-weight: bold;
+	width: 100%;
+	border-radius: 6px;
+	margin-bottom: 1.5rem;
+	display: flex;
+	justify-content: center;
+	font-size: 1.1rem;
+	align-items: center;
+	height: 50px;
+	color: $white;
+	text-decoration: none;
+	background-color: $primaryColor;
+}
+.mobile-menu-footer-btn:hover {
+	color: $white;
 }
 
 @media screen and (max-width: 991px) {
