@@ -35,6 +35,9 @@ body {
 .bg-darkwhite {
 	background-color: $darkWhite;
 }
+.cursor-ptr {
+	cursor: pointer;
+}
 
 @media screen and (max-width: 576px) {
     html {

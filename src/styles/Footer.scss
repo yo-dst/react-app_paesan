@@ -97,11 +97,8 @@
     animation: reduce 0.4s ease-in-out;
 }
 
-.footer-top-block {
-    padding-left: 2rem;
-}
 .footer-top-logo {
-	margin-left: 0rem;
+	margin-left: -1rem;
 }
 
 @media screen and (max-width: 1199px) {
@@ -121,6 +118,6 @@
 
 @media screen and (max-width: 575px) {
 	.footer-top-logo {
-		margin-left: -2rem;
+		//margin-left: 2rem;
 	}
 }

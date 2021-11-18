@@ -82,16 +82,19 @@ const HomeScreen = () => {
 						<div className="featured-cause-section-title-square"></div>
 						<div className="featured-cause-section-title-title">FEATURED CAUSE</div>
 					</div>
-					<Image src="https://picsum.photos/1000/800" fluid className="featured-cause-img" style={{borderRadius: "4px 4px 0 0"}} />
-					<ProgressBar className="featured-cause-progress-bar" now={55} />
-					<div className="featured-cause-body">
-						<div className="featured-cause-title">Cause Name, Country</div>
-						<div className="featured-cause-timeLeft">XX Days/hours/minutes left</div>
-						<div className="featured-cause-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis imperdiet ipsum. Sed sagittis ex metus, sed vestibulum erat rutrum nec.</div>
-						<div className="featured-cause-hashtags">#Freedom Of Speech, #Heathcare</div>
-						<div className="featured-cause-participants">5,059,575 Participants</div>
-						<div className="featured-cause-organisation">By Organisation Name</div>
+					<div className="cursor-ptr">
+						<Image src="https://picsum.photos/1000/800" fluid className="featured-cause-img" style={{borderRadius: "4px 4px 0 0"}} />
+						<ProgressBar className="featured-cause-progress-bar" now={55} />
+						<div className="featured-cause-body">
+							<div className="featured-cause-title">Cause Name, Country</div>
+							<div className="featured-cause-timeLeft">XX Days/hours/minutes left</div>
+							<div className="featured-cause-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis imperdiet ipsum. Sed sagittis ex metus, sed vestibulum erat rutrum nec.</div>
+							<div className="featured-cause-hashtags">#Freedom Of Speech, #Heathcare</div>
+							<div className="featured-cause-participants">5,059,575 Participants</div>
+							<div className="featured-cause-organisation">By Organisation Name</div>
+						</div>
 					</div>
+					
 					
 				</Col>
 				<Col xs={12} xl={6} className="urgent">
@@ -121,6 +124,7 @@ const HomeScreen = () => {
 								</div>
 							</div>
 						</div>
+						
 					))}
 					{nbPages !== 1 ?
 						<Pagination nbPages={nbPages} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />

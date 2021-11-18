@@ -13,14 +13,8 @@
 	padding-bottom: 0.5rem;
 }
 .hamburger-btn {
-	border: none;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: 0.5rem 0.7rem;
-	border-radius: 4px;
+	padding: 0.2rem 0.5rem;
 	background-color: transparent;
-	transition: transform 0.15s;
 }
 .hamburger-btn:hover {
 	.hamburger-icon {
@@ -30,6 +24,7 @@
 .hamburger-icon {
 	font-size: 2rem;
 	color: $white;
+	transition: transform 0.15s;
 }
 .header-mobile-logo {
 	width: 200px;
@@ -38,6 +33,7 @@
 .header-mobile-btn {
 	border: none;
 	background-color: transparent;
+	padding: 0.2rem 0.5rem;
 }
 .header-mobile-btn:hover {
 	.header-mobile-icon {

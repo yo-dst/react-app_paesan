@@ -16,7 +16,6 @@ const NavbarMobile = ({ show }) => {
 					<Link to={item.path} key={``}>{item.name}</Link>
 				</Col>
 			))}
-			
 		</Row>
 	);
 }	
@@ -32,16 +31,9 @@ const HeaderMobile = () => {
 		<Container fluid className="header-mobile-wrapper">
 			<Row className="header-mobile">
 				<Col xs="auto">
-					<div style={{width: "2rem"}}>
-						<button className="hamburger-btn" onClick={e => setShow(!show)}>
-							{show ?
-								<FontAwesomeIcon icon={faTimes} className="hamburger-icon"/>
-								:
-								<FontAwesomeIcon icon={faBars} className="hamburger-icon"/>
-							}
-						</button>
+					<div className="hamburger-btn cursor-ptr" onClick={e => setShow(!show)}>
+						<FontAwesomeIcon icon={faBars} className="hamburger-icon"/>
 					</div>
-					
 				</Col>
 				<Col xs="auto" className="d-flex">
 					<Link to="/">
@@ -49,11 +41,8 @@ const HeaderMobile = () => {
 					</Link>
 				</Col>
 				<Col xs="auto" className="d-flex justify-content">
-					<Link to="/login" className="header-mobile-btn" style={{marginRight: "1.5rem"}}>
+					<Link to="/login" className="header-mobile-btn">
 						<FontAwesomeIcon icon={faUser} className="header-mobile-icon" />
-					</Link>
-					<Link to="/" className="header-mobile-btn">
-						<FontAwesomeIcon icon={faSearch} className="header-mobile-icon" />
 					</Link>
 				</Col>
 			</Row>
