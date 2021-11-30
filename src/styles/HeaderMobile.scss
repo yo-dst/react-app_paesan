@@ -139,9 +139,11 @@
 	color: $white;
 	text-decoration: none;
 	background-color: $primaryColor;
+	transition: transform 0.2s;
 }
 .mobile-menu-footer-btn:hover {
 	color: $white;
+	transform: scale(1.02);
 }
 
 @media screen and (max-width: 991px) {

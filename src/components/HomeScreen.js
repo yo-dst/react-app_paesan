@@ -59,18 +59,90 @@ const urgentContent = [
         img: "https://picsum.photos/500/300",
         title: "This is a cool story, really really cool",
         txt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis imperdiet ipsum. Sed sagittis ex metus, sed vestibulum erat rutrum nec.",
-        organisation: "Organisation Name 5"
+        organisation: "Organisation Name 7"
     },
     {
         img: "https://picsum.photos/500/300",
         title: "This is a cool story, really really cool",
         txt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis imperdiet ipsum. Sed sagittis ex metus, sed vestibulum erat rutrum nec.",
-        organisation: "Organisation Name 6"
-    }
+        organisation: "Organisation Name 8"
+    },
+	{
+        img: "https://picsum.photos/500/300",
+        title: "This is a cool story, really really cool",
+        txt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis imperdiet ipsum. Sed sagittis ex metus, sed vestibulum erat rutrum nec.",
+        organisation: "Organisation Name 9"
+    },
+    {
+        img: "https://picsum.photos/500/300",
+        title: "This is a cool story, really really cool",
+        txt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis imperdiet ipsum. Sed sagittis ex metus, sed vestibulum erat rutrum nec.",
+        organisation: "Organisation Name 10"
+    },
+    {
+        img: "https://picsum.photos/500/300",
+        title: "This is a cool story, really really cool",
+        txt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis imperdiet ipsum. Sed sagittis ex metus, sed vestibulum erat rutrum nec.",
+        organisation: "Organisation Name 11"
+    },
+    {
+        img: "https://picsum.photos/500/300",
+        title: "This is a cool story, really really cool",
+        txt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis imperdiet ipsum. Sed sagittis ex metus, sed vestibulum erat rutrum nec.",
+        organisation: "Organisation Name 12"
+    },
+    {
+        img: "https://picsum.photos/500/300",
+        title: "This is a cool story, really really cool",
+        txt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis imperdiet ipsum. Sed sagittis ex metus, sed vestibulum erat rutrum nec.",
+        organisation: "Organisation Name 13"
+    },
+    {
+        img: "https://picsum.photos/500/300",
+        title: "This is a cool story, really really cool",
+        txt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis imperdiet ipsum. Sed sagittis ex metus, sed vestibulum erat rutrum nec.",
+        organisation: "Organisation Name 14"
+    },
+	{
+        img: "https://picsum.photos/500/300",
+        title: "This is a cool story, really really cool",
+        txt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis imperdiet ipsum. Sed sagittis ex metus, sed vestibulum erat rutrum nec.",
+        organisation: "Organisation Name 15"
+    },
+    {
+        img: "https://picsum.photos/500/300",
+        title: "This is a cool story, really really cool",
+        txt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis imperdiet ipsum. Sed sagittis ex metus, sed vestibulum erat rutrum nec.",
+        organisation: "Organisation Name 16"
+    },
+    {
+        img: "https://picsum.photos/500/300",
+        title: "This is a cool story, really really cool",
+        txt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis imperdiet ipsum. Sed sagittis ex metus, sed vestibulum erat rutrum nec.",
+        organisation: "Organisation Name 17"
+    },
+    {
+        img: "https://picsum.photos/500/300",
+        title: "This is a cool story, really really cool",
+        txt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis imperdiet ipsum. Sed sagittis ex metus, sed vestibulum erat rutrum nec.",
+        organisation: "Organisation Name 18"
+    },
+	{
+        img: "https://picsum.photos/500/300",
+        title: "This is a cool story, really really cool",
+        txt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis imperdiet ipsum. Sed sagittis ex metus, sed vestibulum erat rutrum nec.",
+        organisation: "Organisation Name 19"
+    },
+    {
+        img: "https://picsum.photos/500/300",
+        title: "This is a cool story, really really cool",
+        txt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis imperdiet ipsum. Sed sagittis ex metus, sed vestibulum erat rutrum nec.",
+        organisation: "Organisation Name 20"
+	}
 ];
 
 const HomeScreen = () => {
-	const [selectedPage, setSelectedPage] = useState(0);
+	const [currentPage, setCurrentPage] = useState(1);
 	const nbPages = Math.ceil(urgentContent.length / 3);
 
 	return (
@@ -102,7 +174,7 @@ const HomeScreen = () => {
 						<div className="featured-cause-section-title-square"></div>
 						<div className="urgent-section-title">URGENT REQUIRES ACTION</div>
 					</div>
-					{urgentContent.slice(selectedPage * 3, selectedPage * 3 + 3).map((item, index) => (
+					{urgentContent.slice((currentPage - 1) * 3, (currentPage - 1) * 3 + 3).map((item, index) => (
 						<div className="urgent-item" key={`urgent-item-${index}`}>
 							<Image src={item.img} className="urgent-img" />
 							<div className="urgent-item-body">
@@ -127,7 +199,7 @@ const HomeScreen = () => {
 						
 					))}
 					{nbPages !== 1 ?
-						<Pagination nbPages={nbPages} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+						<Pagination nbPages={nbPages} pageNumberLimit={5} currentPage={currentPage} setCurrentPage={setCurrentPage} />
 						:
 						null
 					}

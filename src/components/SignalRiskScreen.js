@@ -126,7 +126,7 @@ const PetitionTitle = ({ title, subtitle }) => {
 	);
 }
 
-// RETAFF DESSUS
+//retaff dessus
 const FilesInput = ({ state, setState }) => {
 	const [urls, setUrls] = useState("");
 	
@@ -154,9 +154,6 @@ const FilesInput = ({ state, setState }) => {
 				state={urls}
 				setState={e => setUrls(e.target.value)}
 			/>
-			{state.files.map(file => (
-				<div>{file.name}</div>
-			))}
 		</div>
 	);
 }
@@ -185,7 +182,7 @@ const SignalRiskScreen = () => {
 					<Row className="justify-content-start mt-3">
 						{issuesContent.map((item, index) => (
 							<Col 
-								md={3}
+								xs={12} sm={6} md={3}
 								className={`petition-issue-container ${index ===state.issueSelected ? "petition-issue-container-active" : null}`} 
 								key={`petition-issue-${index}`}
 								onClick={e => setState({ ...state, issueSelected: index })}

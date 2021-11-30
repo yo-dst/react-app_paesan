@@ -1,43 +1,71 @@
+import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 import "../styles/Pagination.scss";
 
-const Pagination = ({ nbPages, selectedPage, setSelectedPage }) => {
-	const pagItems = [];
+const Pagination = ({ nbPages, pageNumberLimit, currentPage, setCurrentPage }) => {
+	const [maxPageNumberLimit, setMaxPageNumberLimit] = useState(pageNumberLimit);
+	const [minPageNumberLimit, setMinPageNumberLimit] = useState(0);
 
-	if (nbPages > 7) {
+	const pages = [];
+	for (let i = 1; i < nbPages; i++) {
+		pages.push(i);
+	}
 
-	} else {
-		for (let i = 0; i < nbPages; i++) {
-			pagItems.push(
-				<button onClick={e => setSelectedPage(i)} className={`custom-pagination-item ${i === selectedPage ? "custom-active" : null}`} key={`custom-pagination-item-${i}`}>
-					{i + 1}
-				</button>
+	const handleClick = (e) => {
+		setCurrentPage(parseInt(e.target.id));
+	}
+
+	const renderPageNumbers = pages.map(number => {
+		if (number < maxPageNumberLimit + 1 && number > minPageNumberLimit) {
+			return (
+				<div 
+					key={number} 
+					id={number} 
+					onClick={handleClick}
+					className={`pagination-item ${currentPage === number ? "pagination-item-active" : null}`}
+				>
+					{number}
+				</div>
 			);
 		}
-	}
-	
-	const handlePrev = () => {
-		if (selectedPage !== 0)
-			setSelectedPage(selectedPage - 1);
-	}
+		return (null);
+	});
 
 	const handleNext = () => {
-		if (selectedPage !== nbPages - 1)
-			setSelectedPage(selectedPage + 1);
+		if (currentPage === nbPages - 1)
+			return ;
+
+		setCurrentPage(currentPage + 1);
+
+		if(currentPage + 1 > maxPageNumberLimit) {
+			setMaxPageNumberLimit(maxPageNumberLimit + pageNumberLimit);
+			setMinPageNumberLimit(minPageNumberLimit + pageNumberLimit);
+		}
+	}
+
+	const handlePrev = () => {
+		if (currentPage === 1)
+			return ;
+		setCurrentPage(currentPage - 1);
+
+		if((currentPage - 1) % pageNumberLimit === 0) {
+			setMaxPageNumberLimit(maxPageNumberLimit - pageNumberLimit);
+			setMinPageNumberLimit(minPageNumberLimit - pageNumberLimit);
+		}
 	}
 
 	if (nbPages <= 1)
 		return (null);
 	return (
-		<div className="custom-pagination">
-		<button className="custom-pagination-prev" onClick={handlePrev}>
-			<FontAwesomeIcon className="custom-pagination-icon" icon={faChevronLeft} />
+		<div className="pagination">
+		<button className="pagination-prev" onClick={handlePrev}>
+			<FontAwesomeIcon className="pagination-icon" icon={faChevronLeft} />
 		</button>
-		{pagItems}
-		<button className="custom-pagination-next" onClick={handleNext}>
-			<FontAwesomeIcon className="custom-pagination-icon" icon={faChevronRight} />
+		{renderPageNumbers}
+		<button className="pagination-next" onClick={handleNext}>
+			<FontAwesomeIcon className="pagination-icon" icon={faChevronRight} />
 		</button>
 	</div>
 	);
